@@ -15,17 +15,19 @@ export function CTAStrip({
   buttonHref = "/contact",
   description,
 }: CTAStripProps) {
-  const parts = highlight ? headline.split(highlight) : [headline];
+  const highlightIndex =
+    highlight && headline ? headline.lastIndexOf(highlight) : -1;
+  const hasHighlight = highlightIndex >= 0 && highlight;
 
   return (
     <section className="bg-brand-grey py-16">
       <div className="mx-auto max-w-4xl px-4 text-center md:px-6">
         <h2 className="text-3xl font-black uppercase tracking-wide md:text-4xl">
-          {highlight ? (
+          {hasHighlight ? (
             <>
-              {parts[0]}
+              {headline.slice(0, highlightIndex)}
               <span className="text-brand-orange">{highlight}</span>
-              {parts[1]}
+              {headline.slice(highlightIndex + highlight.length)}
             </>
           ) : (
             headline
