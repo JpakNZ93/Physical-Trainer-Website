@@ -1,0 +1,43 @@
+import { CTAButton } from "./CTAButton";
+
+interface CTAStripProps {
+  headline: string;
+  highlight?: string;
+  buttonText: string;
+  buttonHref?: string;
+  description?: string;
+}
+
+export function CTAStrip({
+  headline,
+  highlight,
+  buttonText,
+  buttonHref = "/contact",
+  description,
+}: CTAStripProps) {
+  const parts = highlight ? headline.split(highlight) : [headline];
+
+  return (
+    <section className="bg-brand-grey py-16">
+      <div className="mx-auto max-w-4xl px-4 text-center md:px-6">
+        <h2 className="text-3xl font-black uppercase tracking-wide md:text-4xl">
+          {highlight ? (
+            <>
+              {parts[0]}
+              <span className="text-brand-orange">{highlight}</span>
+              {parts[1]}
+            </>
+          ) : (
+            headline
+          )}
+        </h2>
+        {description && (
+          <p className="mx-auto mt-4 max-w-2xl text-white/70">{description}</p>
+        )}
+        <div className="mt-8">
+          <CTAButton href={buttonHref}>{buttonText}</CTAButton>
+        </div>
+      </div>
+    </section>
+  );
+}
