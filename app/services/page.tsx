@@ -6,7 +6,7 @@ import { services, packages } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "Personal training, boxing, small group training, and online coaching packages at 180PT Gregory Hills.",
+    "Personal training, boxing, small group training, and online coaching packages at 180PT Western Sydney.",
 };
 
 export default function ServicesPage() {

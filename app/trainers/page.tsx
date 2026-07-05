@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
 import { PlaceholderImage } from "@/components/PlaceholderImage";
 import { Check } from "lucide-react";
-import { qualifications } from "@/lib/constants";
+import { coach, qualifications } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Trainers",
-  description:
-    "Meet Peter, founder and head coach at 180PT — personal trainer and boxing coach with 10+ years of experience.",
+  description: `Meet ${coach.name}, founder and head coach at 180PT — personal trainer and boxing coach with 10+ years of experience.`,
 };
 
 export default function TrainersPage() {
@@ -21,15 +20,15 @@ export default function TrainersPage() {
               Meet Your Coach
             </h1>
             <h2 className="mt-4 text-4xl font-black uppercase tracking-wide text-brand-orange md:text-5xl">
-              Peter
+              {coach.name}
             </h2>
             <p className="mt-2 text-lg font-semibold uppercase tracking-wider text-white/80">
-              Founder | Personal Trainer | Boxing Coach
+              {coach.title}
             </p>
 
             <p className="mt-6 text-white/70">
-              Peter is passionate about helping people completely transform their lives through
-              fitness.
+              {coach.firstName} is passionate about helping people completely transform their lives
+              through fitness.
             </p>
             <p className="mt-4 text-white/70">
               With more than a decade of coaching experience, he believes that consistency,

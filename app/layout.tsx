@@ -12,7 +12,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "180PT | Personal Training Gregory Hills",
+    default: "180PT | Personal Training Western Sydney",
     template: "%s | 180PT",
   },
   description: siteConfig.description,

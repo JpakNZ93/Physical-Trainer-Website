@@ -1,6 +1,6 @@
 # 180PT Fitness Website
 
-Static marketing website for **180PT** — personal training, boxing, and strength coaching in Gregory Hills, NSW.
+Static marketing website for **180PT** — personal training, boxing, and strength coaching in Western Sydney.
 
 ## Tech Stack
 

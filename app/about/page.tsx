@@ -6,7 +6,7 @@ import { Target } from "lucide-react";
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Learn about 180PT's mission to help people turn their lives around through health, fitness, and discipline in Gregory Hills, NSW.",
+    "Learn about 180PT's mission to help people turn their lives around through health, fitness, and discipline in Western Sydney.",
 };
 
 export default function AboutPage() {

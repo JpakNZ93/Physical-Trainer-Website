@@ -8,7 +8,7 @@ import { openingHours, siteConfig } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Get in touch with 180PT in Gregory Hills, NSW. Book your free consultation today.",
+    "Get in touch with 180PT in Western Sydney. Book your free consultation today.",
 };
 
 export default function ContactPage() {

@@ -2,12 +2,18 @@ export const siteConfig = {
   name: "180PT",
   tagline: "Turning Lives Around",
   description:
-    "Personal training, boxing, and strength coaching in Gregory Hills, NSW. Helping everyday people become stronger, healthier, and more confident.",
+    "Personal training, boxing, and strength coaching in Western Sydney. Helping everyday people become stronger, healthier, and more confident.",
   url: "https://www.180pt.com.au",
   email: "hello@180pt.com.au",
-  phone: "0450 000 000",
-  phoneHref: "tel:0450000000",
-  address: "Gregory Hills, NSW",
+  phone: "0450 122 665",
+  phoneHref: "tel:0450122665",
+  address: "Western Sydney",
+};
+
+export const coach = {
+  name: "Johnson Huynh",
+  firstName: "Johnson",
+  title: "Founder | Personal Trainer | Boxing Coach",
 };
 
 export const navLinks = [
@@ -101,6 +107,8 @@ export const packages = [
 export const qualifications = [
   "Certificate III & IV in Fitness",
   "Diploma of Community Services",
+  "Strength and Conditioning",
+  "Boxing for Fitness",
   "Working With Children Check",
   "First Aid & CPR",
   "10+ Years Coaching Experience",
