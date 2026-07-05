@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { PlaceholderImage } from "@/components/PlaceholderImage";
+import { CoachPortrait } from "@/components/CoachPortrait";
 import { Check } from "lucide-react";
 import { coach, qualifications } from "@/lib/constants";
 
@@ -13,7 +13,7 @@ export default function TrainersPage() {
     <section className="py-16 md:py-24">
       <div className="mx-auto max-w-7xl px-4 md:px-6">
         <div className="grid items-start gap-12 lg:grid-cols-2">
-          <PlaceholderImage label="Coach Portrait" aspectRatio="portrait" className="w-full" />
+          <CoachPortrait />
 
           <div>
             <h1 className="text-3xl font-black uppercase tracking-wide text-white md:text-4xl">
