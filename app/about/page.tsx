@@ -15,10 +15,10 @@ export default function AboutPage() {
       <div className="mx-auto max-w-7xl px-4 md:px-6">
         <div className="grid items-center gap-12 lg:grid-cols-2">
           <div>
-            <h1 className="text-4xl font-black uppercase tracking-wide text-brand-orange md:text-5xl">
+            <h1 className="text-4xl font-black uppercase tracking-wide text-white md:text-5xl">
               About Us
             </h1>
-            <h2 className="mt-4 text-2xl font-bold uppercase tracking-wide">
+            <h2 className="brushstroke-highlight mt-4 text-2xl font-bold uppercase tracking-wide">
               Turning Lives Around
             </h2>
 
@@ -40,10 +40,10 @@ export default function AboutPage() {
               performance to the next level, we&apos;ll guide you every step of the way.
             </p>
 
-            <div className="mt-8 border border-brand-orange/30 bg-brand-grey p-6">
+            <div className="mt-8 border border-brand-yellow/30 bg-brand-grey p-6">
               <div className="mb-3 flex items-center gap-3">
-                <Target className="h-6 w-6 text-brand-orange" />
-                <h3 className="text-lg font-bold uppercase tracking-wider text-brand-orange">
+                <Target className="h-6 w-6 text-brand-yellow" />
+                <h3 className="text-lg font-bold uppercase tracking-wider text-brand-yellow">
                   Our Mission
                 </h3>
               </div>

@@ -15,8 +15,8 @@ export function FeatureBar() {
         const Icon = iconMap[feature.icon];
         return (
           <div key={feature.label} className="flex flex-col items-center text-center">
-            <div className="mb-3 flex h-14 w-14 items-center justify-center rounded-full border border-brand-orange/30 bg-brand-orange/10">
-              <Icon className="h-7 w-7 text-brand-orange" />
+            <div className="mb-3 flex h-14 w-14 items-center justify-center rounded-full border border-brand-yellow/30 bg-brand-yellow/10">
+              <Icon className="h-7 w-7 text-brand-yellow" />
             </div>
             <span className="text-xs font-bold uppercase tracking-wider md:text-sm">
               {feature.label}

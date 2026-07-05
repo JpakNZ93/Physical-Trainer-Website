@@ -15,7 +15,7 @@ export function Hero({ showCTAs = true }: HeroProps) {
 
       <div className="relative z-10 mx-auto max-w-7xl px-4 py-20 md:px-6">
         <h1 className="max-w-3xl text-4xl font-black uppercase italic leading-tight tracking-wide md:text-6xl lg:text-7xl">
-          Turning <span className="text-brand-orange not-italic">Lives</span> Around
+          Turning <span className="text-brand-yellow not-italic">Lives</span> Around
         </h1>
         <p className="mt-4 text-lg font-semibold uppercase tracking-widest text-white/90 md:text-xl">
           Personal Training • Boxing • Strength &amp; Fitness

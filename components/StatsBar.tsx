@@ -14,8 +14,8 @@ export function StatsBar() {
         const Icon = iconMap[stat.icon];
         return (
           <div key={stat.label} className="flex flex-col items-center text-center">
-            <div className="mb-3 flex h-14 w-14 items-center justify-center rounded-full border border-brand-orange/30 bg-brand-orange/10">
-              <Icon className="h-7 w-7 text-brand-orange" />
+            <div className="mb-3 flex h-14 w-14 items-center justify-center rounded-full border border-brand-yellow/30 bg-brand-yellow/10">
+              <Icon className="h-7 w-7 text-brand-yellow" />
             </div>
             <span className="text-sm font-bold uppercase tracking-wider">{stat.label}</span>
           </div>

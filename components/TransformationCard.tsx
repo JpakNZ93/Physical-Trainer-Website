@@ -14,8 +14,8 @@ export function TransformationCard({ name, result, timeframe }: TransformationCa
         <PlaceholderImage label="After" aspectRatio="portrait" />
       </div>
       <div className="mt-4 text-center">
-        <h3 className="text-lg font-bold uppercase tracking-wider text-brand-orange">{name}</h3>
-        <p className="mt-1 text-2xl font-black text-brand-orange">{result}</p>
+        <h3 className="text-lg font-bold uppercase tracking-wider text-brand-yellow">{name}</h3>
+        <p className="mt-1 text-2xl font-black text-white">{result}</p>
         <p className="mt-1 text-sm uppercase tracking-wider text-white/60">{timeframe}</p>
       </div>
     </div>

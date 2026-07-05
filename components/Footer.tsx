@@ -14,7 +14,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h3 className="mb-4 text-sm font-bold uppercase tracking-wider text-brand-orange">
+            <h3 className="mb-4 text-sm font-bold uppercase tracking-wider text-brand-yellow">
               Quick Links
             </h3>
             <nav className="flex flex-col gap-2">
@@ -22,7 +22,7 @@ export function Footer() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-sm text-white/70 transition-colors hover:text-brand-orange"
+                  className="text-sm text-white/70 transition-colors hover:text-brand-yellow"
                 >
                   {link.label}
                 </Link>
@@ -31,18 +31,18 @@ export function Footer() {
           </div>
 
           <div>
-            <h3 className="mb-4 text-sm font-bold uppercase tracking-wider text-brand-orange">
+            <h3 className="mb-4 text-sm font-bold uppercase tracking-wider text-brand-yellow">
               Contact
             </h3>
             <div className="flex flex-col gap-2 text-sm text-white/70">
               <span>{siteConfig.address}</span>
-              <a href={siteConfig.phoneHref} className="hover:text-brand-orange">
+              <a href={siteConfig.phoneHref} className="hover:text-brand-yellow">
                 {siteConfig.phone}
               </a>
-              <a href={`mailto:${siteConfig.email}`} className="hover:text-brand-orange">
+              <a href={`mailto:${siteConfig.email}`} className="hover:text-brand-yellow">
                 {siteConfig.email}
               </a>
-              <a href={siteConfig.url} className="hover:text-brand-orange">
+              <a href={siteConfig.url} className="hover:text-brand-yellow">
                 {siteConfig.url.replace("https://", "")}
               </a>
             </div>

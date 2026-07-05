@@ -39,11 +39,11 @@ export function ContactForm() {
   }
 
   const inputClass =
-    "w-full border border-white/20 bg-brand-grey px-4 py-3 text-white placeholder-white/40 focus:border-brand-orange focus:outline-none";
+    "w-full border border-white/20 bg-brand-grey px-4 py-3 text-white placeholder-white/40 focus:border-brand-yellow focus:outline-none";
 
   return (
     <div className="relative">
-      <h3 className="mb-6 text-2xl font-bold uppercase tracking-wider text-brand-orange">
+      <h3 className="mb-6 text-2xl font-bold uppercase tracking-wider text-brand-yellow">
         Send Us a Message
       </h3>
 
@@ -82,7 +82,7 @@ export function ContactForm() {
 
         <button
           type="submit"
-          className="mt-2 w-full bg-brand-orange px-6 py-4 text-sm font-bold uppercase tracking-wider text-white transition-colors hover:bg-orange-600"
+          className="mt-2 w-full bg-brand-yellow px-6 py-4 text-sm font-bold uppercase tracking-wider text-brand-black transition-colors hover:bg-yellow-300"
         >
           Send Message
         </button>

@@ -3,7 +3,7 @@
 @theme inline {
   --color-brand-black: #0a0a0a;
   --color-brand-white: #ffffff;
-  --color-brand-orange: #ff6b00;
+  --color-brand-yellow: #ffd700;
   --color-brand-grey: #1a1a1a;
   --color-brand-grey-light: #2a2a2a;
   --font-sans: var(--font-inter);
@@ -17,4 +17,31 @@ body {
   background-color: var(--color-brand-black);
   color: var(--color-brand-white);
   font-family: var(--font-inter), system-ui, sans-serif;
+}
+
+.bg-diagonal-lines {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 12px,
+    rgb(255 215 0 / 0.07) 12px,
+    rgb(255 215 0 / 0.07) 14px
+  );
+}
+
+.brushstroke-highlight {
+  position: relative;
+  display: inline-block;
+}
+
+.brushstroke-highlight::after {
+  content: "";
+  position: absolute;
+  left: -0.25rem;
+  right: -0.25rem;
+  bottom: 0.1em;
+  height: 0.35em;
+  background-color: rgb(255 215 0 / 0.45);
+  transform: skewY(-2deg);
+  z-index: -1;
 }

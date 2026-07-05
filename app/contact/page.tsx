@@ -21,7 +21,7 @@ export default function ContactPage() {
         </div>
 
         <div className="relative z-10 mx-auto max-w-7xl px-4 md:px-6">
-          <h1 className="text-4xl font-black uppercase tracking-wide text-brand-orange md:text-5xl">
+          <h1 className="text-4xl font-black uppercase tracking-wide text-white md:text-5xl">
             Contact Us
           </h1>
           <h2 className="mt-2 text-2xl font-bold uppercase tracking-wide">Let&apos;s Get Started</h2>
@@ -31,38 +31,38 @@ export default function ContactPage() {
 
           <div className="mt-12 grid gap-12 lg:grid-cols-2">
             <div>
-              <h3 className="mb-6 text-xl font-bold uppercase tracking-wider text-brand-orange">
+              <h3 className="mb-6 text-xl font-bold uppercase tracking-wider text-brand-yellow">
                 Contact Details
               </h3>
               <div className="flex flex-col gap-4">
                 <div className="flex items-center gap-3 text-white/70">
-                  <MapPin className="h-5 w-5 text-brand-orange" />
+                  <MapPin className="h-5 w-5 text-brand-yellow" />
                   {siteConfig.address}
                 </div>
                 <a
                   href={siteConfig.phoneHref}
-                  className="flex items-center gap-3 text-white/70 hover:text-brand-orange"
+                  className="flex items-center gap-3 text-white/70 hover:text-brand-yellow"
                 >
-                  <Phone className="h-5 w-5 text-brand-orange" />
+                  <Phone className="h-5 w-5 text-brand-yellow" />
                   {siteConfig.phone}
                 </a>
                 <a
                   href={`mailto:${siteConfig.email}`}
-                  className="flex items-center gap-3 text-white/70 hover:text-brand-orange"
+                  className="flex items-center gap-3 text-white/70 hover:text-brand-yellow"
                 >
-                  <Mail className="h-5 w-5 text-brand-orange" />
+                  <Mail className="h-5 w-5 text-brand-yellow" />
                   {siteConfig.email}
                 </a>
                 <a
                   href={siteConfig.url}
-                  className="flex items-center gap-3 text-white/70 hover:text-brand-orange"
+                  className="flex items-center gap-3 text-white/70 hover:text-brand-yellow"
                 >
-                  <Globe className="h-5 w-5 text-brand-orange" />
+                  <Globe className="h-5 w-5 text-brand-yellow" />
                   {siteConfig.url.replace("https://", "")}
                 </a>
               </div>
 
-              <h3 className="mb-4 mt-10 text-xl font-bold uppercase tracking-wider text-brand-orange">
+              <h3 className="mb-4 mt-10 text-xl font-bold uppercase tracking-wider text-brand-yellow">
                 Opening Hours
               </h3>
               <div className="flex flex-col gap-3">

@@ -10,7 +10,7 @@ export default function HomePage() {
       <section className="py-16 md:py-24">
         <div className="mx-auto max-w-7xl px-4 md:px-6">
           <h2 className="text-3xl font-black uppercase tracking-wide md:text-4xl">
-            Why Choose <span className="text-brand-orange">180PT</span>?
+            Why Choose <span className="text-brand-yellow">180PT</span>?
           </h2>
           <p className="mt-6 max-w-3xl text-lg text-white/70">
             At 180PT, we believe fitness is about more than just physical transformation—it&apos;s

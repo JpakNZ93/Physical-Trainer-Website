@@ -11,7 +11,7 @@ export function Logo({ className = "", size = "sm" }: LogoProps) {
   return (
     <Link href="/" className={`inline-flex items-baseline font-black ${textSize} ${className}`}>
       <span className="text-brand-white">180</span>
-      <span className="text-brand-orange">PT</span>
+      <span className="text-brand-yellow">PT</span>
     </Link>
   );
 }

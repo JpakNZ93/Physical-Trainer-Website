@@ -16,7 +16,7 @@ export default function SuccessStoriesPage() {
     <>
       <section className="py-16 md:py-24">
         <div className="mx-auto max-w-7xl px-4 md:px-6">
-          <h1 className="text-4xl font-black uppercase tracking-wide text-brand-orange md:text-5xl">
+          <h1 className="text-4xl font-black uppercase tracking-wide text-white md:text-5xl">
             Success Stories
           </h1>
           <p className="mt-4 max-w-2xl text-white/70">

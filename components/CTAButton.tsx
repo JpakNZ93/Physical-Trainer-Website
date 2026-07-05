@@ -19,8 +19,8 @@ export function CTAButton({
     "inline-flex items-center justify-center px-6 py-3 text-sm font-bold uppercase tracking-wider transition-colors";
   const variantStyles =
     variant === "primary"
-      ? "bg-brand-orange text-brand-white hover:bg-orange-600"
-      : "border-2 border-brand-orange text-brand-white hover:bg-brand-orange/10";
+      ? "bg-brand-yellow text-brand-black hover:bg-yellow-300"
+      : "border-2 border-white text-white hover:bg-white/10";
 
   const classes = `${baseStyles} ${variantStyles} ${className}`;
 

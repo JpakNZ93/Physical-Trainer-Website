@@ -34,10 +34,10 @@ export function ServiceCard({
 
   return (
     <div className="flex flex-col border border-white/10 bg-brand-grey p-6">
-      <div className="mb-4 text-brand-orange">
+      <div className="mb-4 text-brand-yellow">
         <Icon />
       </div>
-      <h3 className="mb-3 text-lg font-bold uppercase tracking-wider text-brand-orange">
+      <h3 className="mb-3 text-lg font-bold uppercase tracking-wider text-brand-yellow">
         {title}
       </h3>
       <p className="mb-4 text-sm text-white/70">{description}</p>
@@ -48,9 +48,9 @@ export function ServiceCard({
         {items.map((item) => (
           <li key={item} className="flex items-start gap-2 text-sm text-white/70">
             {icon === "users" && title === "Small Group Training" ? (
-              <Check className="mt-0.5 h-4 w-4 shrink-0 text-brand-orange" />
+              <Check className="mt-0.5 h-4 w-4 shrink-0 text-brand-yellow" />
             ) : (
-              <span className="text-brand-orange">•</span>
+              <span className="text-brand-yellow">•</span>
             )}
             {item}
           </li>

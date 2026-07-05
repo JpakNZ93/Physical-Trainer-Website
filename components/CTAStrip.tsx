@@ -26,7 +26,7 @@ export function CTAStrip({
           {hasHighlight ? (
             <>
               {headline.slice(0, highlightIndex)}
-              <span className="text-brand-orange">{highlight}</span>
+              <span className="text-brand-yellow">{highlight}</span>
               {headline.slice(highlightIndex + highlight.length)}
             </>
           ) : (
