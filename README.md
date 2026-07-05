@@ -33,8 +33,6 @@ Produces a static `out/` directory ready for Vercel deployment.
 - `/services` — Services & Packages
 - `/trainers` — Meet Your Coach
 - `/contact` — Contact form (UI only)
-- `/success-stories` — Client transformations
-- `/gallery` — Training photos
 
 ## Deployment
 

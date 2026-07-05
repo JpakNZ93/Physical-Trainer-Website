@@ -23,8 +23,6 @@ export const navLinks = [
   { label: "About", href: "/about" },
   { label: "Services", href: "/services" },
   { label: "Trainers", href: "/trainers" },
-  { label: "Success Stories", href: "/success-stories" },
-  { label: "Gallery", href: "/gallery" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -120,28 +118,4 @@ export const openingHours = [
   { days: "Monday – Friday", hours: "5:00am – 8:00pm" },
   { days: "Saturday", hours: "7:00am – 12:00pm" },
   { days: "Sunday", hours: "Closed" },
-];
-
-export const transformations = [
-  { name: "Sarah M.", result: "-18KG", timeframe: "12 WEEKS" },
-  { name: "James T.", result: "-12KG", timeframe: "10 WEEKS" },
-  { name: "Michelle K.", result: "-15KG", timeframe: "14 WEEKS" },
-];
-
-export const stats = [
-  { label: "10+ Years Experience", icon: "award" as const },
-  { label: "1000+ Transformations", icon: "users" as const },
-  { label: "100% Commitment to You", icon: "heart" as const },
-];
-
-export const galleryItems = [
-  "Personal Training Session",
-  "Boxing Training",
-  "Group Workout",
-  "Strength Training",
-  "Boxing Sparring",
-  "Community Event",
-  "One-on-One Coaching",
-  "Fitness Assessment",
-  "Team Training",
 ];
