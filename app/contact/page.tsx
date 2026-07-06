@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { MapPin, Phone, Mail, Globe } from "lucide-react";
+import { Suspense } from "react";
+import { Phone, Mail, Globe } from "lucide-react";
 import { ContactForm } from "@/components/ContactForm";
 import { CTAStrip } from "@/components/CTAStrip";
 import { PlaceholderImage } from "@/components/PlaceholderImage";
@@ -16,7 +17,7 @@ export default function ContactPage() {
     <>
       <section className="relative py-16 md:py-24">
         <div className="absolute inset-0">
-          <PlaceholderImage label="Boxing Gloves Background" aspectRatio="hero" className="h-full w-full" />
+          <PlaceholderImage label="Gym Background" aspectRatio="hero" className="h-full w-full" />
           <div className="absolute inset-0 bg-black/80" />
         </div>
 
@@ -35,10 +36,6 @@ export default function ContactPage() {
                 Contact Details
               </h3>
               <div className="flex flex-col gap-4">
-                <div className="flex items-center gap-3 text-white/70">
-                  <MapPin className="h-5 w-5 text-brand-yellow" />
-                  {siteConfig.address}
-                </div>
                 <a
                   href={siteConfig.phoneHref}
                   className="flex items-center gap-3 text-white/70 hover:text-brand-yellow"
@@ -76,7 +73,13 @@ export default function ContactPage() {
             </div>
 
             <div className="border border-white/10 bg-brand-black/60 p-6 backdrop-blur-sm md:p-8">
-              <ContactForm />
+              <Suspense
+                fallback={
+                  <div className="text-sm text-white/60">Loading contact form...</div>
+                }
+              >
+                <ContactForm />
+              </Suspense>
             </div>
           </div>
         </div>
@@ -86,7 +89,7 @@ export default function ContactPage() {
         headline="Your Only Limit Is You"
         highlight="You"
         description="Start today and discover how 180PT can help you build a stronger body, stronger mind, and stronger life."
-        buttonText="Book Your Free Consultation Today"
+        buttonText="Book a Free Consultation"
       />
     </>
   );

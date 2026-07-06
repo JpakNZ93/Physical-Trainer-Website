@@ -32,7 +32,7 @@ export default function HomePage() {
         headline="Your Only Limit Is You"
         highlight="You"
         description="Start today and discover how 180PT can help you build a stronger body, stronger mind, and stronger life."
-        buttonText="Book Your Free Consultation Today"
+        buttonText="Book a Free Consultation"
       />
     </>
   );

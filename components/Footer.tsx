@@ -9,8 +9,7 @@ export function Footer() {
         <div className="grid gap-8 md:grid-cols-3">
           <div>
             <Logo />
-            <p className="mt-4 text-sm text-white/60">{siteConfig.tagline}</p>
-            <p className="mt-2 text-sm text-white/60">{siteConfig.description}</p>
+            <p className="mt-4 text-sm text-white/60">{siteConfig.description}</p>
           </div>
 
           <div>
@@ -35,7 +34,6 @@ export function Footer() {
               Contact
             </h3>
             <div className="flex flex-col gap-2 text-sm text-white/70">
-              <span>{siteConfig.address}</span>
               <a href={siteConfig.phoneHref} className="hover:text-brand-yellow">
                 {siteConfig.phone}
               </a>

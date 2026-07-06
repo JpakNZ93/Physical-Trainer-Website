@@ -1,10 +1,29 @@
 "use client";
 
-import { useState, FormEvent } from "react";
+import { useState, FormEvent, useMemo } from "react";
+import { useSearchParams } from "next/navigation";
+import { packages } from "@/lib/constants";
 
-export function ContactForm() {
+function buildPackageMessage(packageId: string | null) {
+  if (!packageId) return "";
+
+  const selectedPackage = packages.find((pkg) => pkg.id === packageId);
+  if (!selectedPackage) return "";
+
+  return `I'm interested in ${selectedPackage.title} (${selectedPackage.price}) — ${selectedPackage.detail}.`;
+}
+
+interface ContactFormFieldsProps {
+  packageId: string | null;
+}
+
+function ContactFormFields({ packageId }: ContactFormFieldsProps) {
+  const defaultMessage = useMemo(() => buildPackageMessage(packageId), [packageId]);
+  const selectedPackage = packages.find((pkg) => pkg.id === packageId);
+
   const [showToast, setShowToast] = useState(false);
   const [errors, setErrors] = useState<Record<string, string>>({});
+  const [message, setMessage] = useState(defaultMessage);
 
   function validateEmail(email: string) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
@@ -19,13 +38,13 @@ export function ContactForm() {
     const name = formData.get("name") as string;
     const email = formData.get("email") as string;
     const phone = formData.get("phone") as string;
-    const message = formData.get("message") as string;
+    const messageValue = formData.get("message") as string;
 
     if (!name.trim()) newErrors.name = "Name is required";
     if (!email.trim()) newErrors.email = "Email is required";
     else if (!validateEmail(email)) newErrors.email = "Please enter a valid email";
     if (!phone.trim()) newErrors.phone = "Phone is required";
-    if (!message.trim()) newErrors.message = "Message is required";
+    if (!messageValue.trim()) newErrors.message = "Message is required";
 
     if (Object.keys(newErrors).length > 0) {
       setErrors(newErrors);
@@ -34,6 +53,7 @@ export function ContactForm() {
 
     setErrors({});
     form.reset();
+    setMessage(defaultMessage);
     setShowToast(true);
     setTimeout(() => setShowToast(false), 4000);
   }
@@ -46,6 +66,17 @@ export function ContactForm() {
       <h3 className="mb-6 text-2xl font-bold uppercase tracking-wider text-brand-yellow">
         Send Us a Message
       </h3>
+
+      {selectedPackage && (
+        <div className="mb-4 border border-brand-yellow/30 bg-brand-yellow/10 px-4 py-3">
+          <p className="text-xs font-bold uppercase tracking-wider text-brand-yellow">
+            Selected Package
+          </p>
+          <p className="mt-1 text-sm text-white/90">
+            {selectedPackage.title} — {selectedPackage.price} ({selectedPackage.detail})
+          </p>
+        </div>
+      )}
 
       <form onSubmit={handleSubmit} className="flex flex-col gap-4" noValidate>
         <div>
@@ -76,7 +107,14 @@ export function ContactForm() {
           <label htmlFor="message" className="mb-1 block text-sm text-white/70">
             Message
           </label>
-          <textarea id="message" name="message" rows={5} className={inputClass} />
+          <textarea
+            id="message"
+            name="message"
+            rows={5}
+            className={inputClass}
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+          />
           {errors.message && <p className="mt-1 text-sm text-red-400">{errors.message}</p>}
         </div>
 
@@ -95,4 +133,11 @@ export function ContactForm() {
       )}
     </div>
   );
+}
+
+export function ContactForm() {
+  const searchParams = useSearchParams();
+  const packageId = searchParams.get("package");
+
+  return <ContactFormFields key={packageId ?? "default"} packageId={packageId} />;
 }

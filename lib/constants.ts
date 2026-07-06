@@ -1,13 +1,11 @@
 export const siteConfig = {
   name: "180PT",
-  tagline: "Turning Lives Around",
   description:
-    "Personal training, boxing, and strength coaching in Western Sydney. Helping everyday people become stronger, healthier, and more confident.",
+    "Private personal training in Western Sydney. Helping everyday people become stronger, healthier, and more confident.",
   url: "https://www.180pt.com.au",
   email: "hello@180pt.com.au",
   phone: "0450 122 665",
   phoneHref: "tel:0450122665",
-  address: "Western Sydney",
 };
 
 export const coach = {
@@ -83,21 +81,25 @@ export const services = [
 
 export const packages = [
   {
+    id: "package-1",
     title: "Package 1",
     price: "$180",
     detail: "2 x 45 minute sessions per week",
   },
   {
+    id: "package-2",
     title: "Package 2",
     price: "$270",
     detail: "3 x 45 minute sessions per week",
   },
   {
+    id: "small-group",
     title: "Small Group Training",
     price: "$30",
     detail: "per person — minimum 4 people",
   },
   {
+    id: "online-coaching",
     title: "Online Coaching",
     price: "$80",
     detail: "per session",
@@ -106,7 +108,6 @@ export const packages = [
 
 export const qualifications = [
   "Certificate III & IV in Fitness",
-  "Diploma of Community Services",
   "Strength and Conditioning",
   "Boxing for Fitness",
   "Working With Children Check",

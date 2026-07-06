@@ -18,7 +18,7 @@ export function Hero({ showCTAs = true }: HeroProps) {
           Turning <span className="text-brand-yellow not-italic">Lives</span> Around
         </h1>
         <p className="mt-4 text-lg font-semibold uppercase tracking-widest text-white/90 md:text-xl">
-          Personal Training • Boxing • Strength &amp; Fitness
+          Private Personal Training
         </p>
         <p className="mt-6 max-w-xl text-lg text-white/70">
           Helping everyday people become stronger, healthier, and more confident through
@@ -27,10 +27,7 @@ export function Hero({ showCTAs = true }: HeroProps) {
 
         {showCTAs && (
           <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-            <CTAButton href="/contact">Start Today</CTAButton>
-            <CTAButton href="/contact" variant="secondary">
-              Book a Free Consultation
-            </CTAButton>
+            <CTAButton href="/contact">Book a Free Consultation</CTAButton>
           </div>
         )}
       </div>

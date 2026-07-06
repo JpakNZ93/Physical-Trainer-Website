@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   },
   description: siteConfig.description,
   openGraph: {
-    title: "180PT | Turning Lives Around",
+    title: "180PT | Private Personal Training Western Sydney",
     description: siteConfig.description,
     url: siteConfig.url,
     siteName: siteConfig.name,
