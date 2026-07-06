@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 interface LogoProps {
@@ -5,13 +6,22 @@ interface LogoProps {
   size?: "sm" | "lg";
 }
 
-export function Logo({ className = "", size = "sm" }: LogoProps) {
-  const textSize = size === "lg" ? "text-5xl md:text-7xl" : "text-2xl";
+const sizeStyles = {
+  sm: "h-10 w-auto",
+  lg: "h-24 w-auto md:h-32",
+};
 
+export function Logo({ className = "", size = "sm" }: LogoProps) {
   return (
-    <Link href="/" className={`inline-flex items-baseline font-black ${textSize} ${className}`}>
-      <span className="text-brand-white">180</span>
-      <span className="text-brand-yellow">PT</span>
+    <Link href="/" className={`inline-flex items-center ${className}`}>
+      <Image
+        src="/logo.png"
+        alt="180PT"
+        width={320}
+        height={128}
+        priority
+        className={sizeStyles[size]}
+      />
     </Link>
   );
 }
