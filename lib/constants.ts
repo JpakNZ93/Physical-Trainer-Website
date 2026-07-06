@@ -12,7 +12,7 @@ export const coach = {
   name: "Johnson Huynh",
   firstName: "Johnson",
   title: "Founder | Personal Trainer | Boxing Coach",
-  image: "/images/coach/johnson-huynh.jpg",
+  image: "/images/coach/Johnson_coach.jpg",
   imageAlt: "Johnson Huynh, founder and head coach at 180PT",
 };
 
