@@ -63,7 +63,7 @@ export const services = [
     icon: "users" as const,
     description: "Train with friends while staying motivated together.",
     items: ["Affordable", "Fun", "High Energy", "Personal Coaching"],
-    footer: "Minimum 4 people.",
+    footer: "Minimum 3–4 people.",
   },
   {
     title: "Online Coaching",
