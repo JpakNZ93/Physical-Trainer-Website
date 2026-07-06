@@ -83,25 +83,21 @@ export const packages = [
   {
     id: "package-1",
     title: "Package 1",
-    price: "$180",
     detail: "2 x 45 minute sessions per week",
   },
   {
     id: "package-2",
     title: "Package 2",
-    price: "$270",
     detail: "3 x 45 minute sessions per week",
   },
   {
     id: "small-group",
     title: "Small Group Training",
-    price: "$30",
     detail: "per person — minimum 4 people",
   },
   {
     id: "online-coaching",
     title: "Online Coaching",
-    price: "$80",
     detail: "per session",
   },
 ];

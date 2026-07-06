@@ -10,7 +10,7 @@ function buildPackageMessage(packageId: string | null) {
   const selectedPackage = packages.find((pkg) => pkg.id === packageId);
   if (!selectedPackage) return "";
 
-  return `I'm interested in ${selectedPackage.title} (${selectedPackage.price}) — ${selectedPackage.detail}.`;
+  return `I'm interested in ${selectedPackage.title} — ${selectedPackage.detail}.`;
 }
 
 interface ContactFormFieldsProps {
@@ -73,7 +73,7 @@ function ContactFormFields({ packageId }: ContactFormFieldsProps) {
             Selected Package
           </p>
           <p className="mt-1 text-sm text-white/90">
-            {selectedPackage.title} — {selectedPackage.price} ({selectedPackage.detail})
+            {selectedPackage.title} — {selectedPackage.detail}
           </p>
         </div>
       )}
