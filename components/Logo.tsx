@@ -15,7 +15,7 @@ export function Logo({ className = "", size = "sm" }: LogoProps) {
   return (
     <Link href="/" className={`inline-flex items-center ${className}`}>
       <Image
-        src="/logo.png"
+        src="/Logo.png"
         alt="180PT"
         width={320}
         height={128}
