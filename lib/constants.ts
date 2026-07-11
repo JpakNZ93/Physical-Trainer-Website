@@ -46,8 +46,7 @@ export const heroMedia = {
 };
 
 export const stitchImages = {
-  servicesHero:
-    "https://lh3.googleusercontent.com/aida-public/AB6AXuDpol9_M7PcRfhAN1nYxvuM3fPX_oNGNCWqszIneKvjQjmuliMLMpummrGZ5MJOLw5we8v7TtyFo_TmzzOB0jsOyasHAm1jzcXDyhRbURuqivGErNiPEcvTWVogjSS3umarBTJ5SVN1WAq_cLhlp0ft9C4uY8Za7d1Dm6fAwqpXX7SkptqTo8XhbqWOawK3JO_GjOpXx37OziZNPs-um0h0lhzg4sACdEZHZPYyavfMTEEzylzY3NHO8K1vZbv3Jo1P8tUKSDIosw",
+  servicesHero: "/images/Hero3.jpg",
   aboutFounder:
     "https://lh3.googleusercontent.com/aida-public/AB6AXuDOJTWUCvVNoj0Ca0bM3RlVlGS-PS-NV3DBR45Ft8gEc-i-0K1jKuaFjh_OvNhmFTl50xfDsY220xGjAeFL--Dc4M0vJkBttkfew9XVwZvczR-DblT8-jMnXIP9YKixlrusXwRc8YP-LF-75EmW9v4i265GWvQgbzRxC4gpiKBn63DqbzkjPXrCFEWPmWDCxBNsN4IakJeBXVsy6iDf69lDy2Y6LP9P0Jj_vM0oI7J5pxVHn0xF8c0HIibf1KSeodViKjDyRPyTtNOG",
   contactHero:
