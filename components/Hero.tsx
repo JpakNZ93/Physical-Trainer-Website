@@ -29,12 +29,6 @@ export function Hero() {
           >
             Book a Free Consultation
           </Link>
-          <Link
-            href="/about"
-            className="touch-manipulation border-2 border-primary px-8 py-4 text-center font-label text-sm uppercase tracking-widest text-primary transition-none hover:bg-primary hover:text-on-primary sm:px-10 sm:py-5 sm:text-base"
-          >
-            View Success Stories
-          </Link>
         </div>
       </div>
 
