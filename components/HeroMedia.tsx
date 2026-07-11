@@ -33,12 +33,21 @@ export function HeroMedia() {
     <>
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
+        src={heroMedia.mobilePoster}
+        alt=""
+        aria-hidden="true"
+        fetchPriority="high"
+        decoding="async"
+        className={`${mediaClass} md:hidden`}
+      />
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
         src={heroMedia.poster}
         alt=""
         aria-hidden="true"
         fetchPriority="high"
         decoding="async"
-        className={mediaClass}
+        className={`${mediaClass} hidden md:block`}
       />
       {shouldPlayVideo && (
         <video

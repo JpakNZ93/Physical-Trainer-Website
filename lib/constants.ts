@@ -43,6 +43,7 @@ export const aboutImages = {
 export const heroMedia = {
   video: "/videos/Park_Boxing.mp4",
   poster: "/images/hero_group_img.png",
+  mobilePoster: "/images/hero-mobile.jpg",
 };
 
 export const stitchImages = {
