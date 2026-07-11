@@ -1,0 +1,36 @@
+{
+  "projectId": "projects/305885712766358028",
+  "title": "Generator PT",
+  "deviceType": "DESKTOP",
+  "lastSyncTime": "2026-07-10T14:18:00.000Z",
+  "screens": {
+    "home": {
+      "id": "projects/305885712766358028/screens/4016fe23c52945df91d48bf785241a06",
+      "label": "Home | 180PT (Light)",
+      "width": 2560,
+      "height": 8286,
+      "route": "/"
+    },
+    "services": {
+      "id": "projects/305885712766358028/screens/1b41f21c779549ce899bc8fd1e6747bc",
+      "label": "Services | 180PT (Light)",
+      "width": 2560,
+      "height": 6338,
+      "route": "/services"
+    },
+    "about": {
+      "id": "projects/305885712766358028/screens/ec2b0e00013140f4918d75a378305222",
+      "label": "About Us | 180PT (Light)",
+      "width": 2560,
+      "height": 7628,
+      "route": "/about"
+    },
+    "contact": {
+      "id": "projects/305885712766358028/screens/e07f71c5048a46b6912fe6588e99ff62",
+      "label": "Contact | 180PT (Light)",
+      "width": 2560,
+      "height": 4478,
+      "route": "/contact"
+    }
+  }
+}

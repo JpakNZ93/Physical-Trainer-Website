@@ -1,0 +1,348 @@
+﻿{
+    "name":  "projects/305885712766358028",
+    "title":  "Generator PT",
+    "visibility":  "PRIVATE",
+    "createTime":  "2026-07-08T13:30:26.820217Z",
+    "updateTime":  "2026-07-10T14:10:52.425615Z",
+    "projectType":  "TEXT_TO_UI_PRO",
+    "thumbnailScreenshot":  {
+                                "name":  "projects/305885712766358028/files/32316cf6e34246a9b1d010db43add44b",
+                                "downloadUrl":  "https://lh3.googleusercontent.com/aida/AP1WRLv0OFdFX0QYYR88WuvPP9EXgO1iy_2VoiELSEyflWWbhjS9zxYldJvgaPfSnhbu20EbuYSRdhjl-QF8sn6mZhwJeMGattELD3FilRxiSZGaa9dHSc22P8b-bSxR6VrEZY3K-d1IF48y0FA0LUeT3kd0AFNbvviwH_HZnBFlRiF2QZF8WF0coRaadHPUQLew2FBRf_Xwlb4X_w6fcs_2uBNzZJd02ju1S9LgJcmjcA-9aKPoXnoH_xLQNg"
+                            },
+    "origin":  "STITCH",
+    "deviceType":  "DESKTOP",
+    "designTheme":  {
+                        "colorMode":  "DARK",
+                        "font":  "ANTON",
+                        "customColor":  "#ffffff",
+                        "headlineFont":  "ANTON",
+                        "bodyFont":  "HANKEN_GROTESK",
+                        "labelFont":  "JETBRAINS_MONO",
+                        "namedColors":  {
+                                            "background":  "#131313",
+                                            "error":  "#ffb4ab",
+                                            "error_container":  "#93000a",
+                                            "inverse_on_surface":  "#313030",
+                                            "inverse_primary":  "#5d5f5f",
+                                            "inverse_surface":  "#e5e2e1",
+                                            "on_background":  "#e5e2e1",
+                                            "on_error":  "#690005",
+                                            "on_error_container":  "#ffdad6",
+                                            "on_primary":  "#2f3131",
+                                            "on_primary_container":  "#636565",
+                                            "on_primary_fixed":  "#1a1c1c",
+                                            "on_primary_fixed_variant":  "#454747",
+                                            "on_secondary":  "#680011",
+                                            "on_secondary_container":  "#ffb8b5",
+                                            "on_secondary_fixed":  "#410007",
+                                            "on_secondary_fixed_variant":  "#92001c",
+                                            "on_surface":  "#e5e2e1",
+                                            "on_surface_variant":  "#c4c7c8",
+                                            "on_tertiary":  "#2f3031",
+                                            "on_tertiary_container":  "#646464",
+                                            "on_tertiary_fixed":  "#1b1c1c",
+                                            "on_tertiary_fixed_variant":  "#464747",
+                                            "outline":  "#8e9192",
+                                            "outline_variant":  "#444748",
+                                            "primary":  "#ffffff",
+                                            "primary_container":  "#e2e2e2",
+                                            "primary_fixed":  "#e2e2e2",
+                                            "primary_fixed_dim":  "#c6c6c7",
+                                            "secondary":  "#ffb3b1",
+                                            "secondary_container":  "#ad0224",
+                                            "secondary_fixed":  "#ffdad8",
+                                            "secondary_fixed_dim":  "#ffb3b1",
+                                            "surface":  "#131313",
+                                            "surface_bright":  "#393939",
+                                            "surface_container":  "#201f1f",
+                                            "surface_container_high":  "#2a2a2a",
+                                            "surface_container_highest":  "#353534",
+                                            "surface_container_low":  "#1c1b1b",
+                                            "surface_container_lowest":  "#0e0e0e",
+                                            "surface_dim":  "#131313",
+                                            "surface_tint":  "#c6c6c7",
+                                            "surface_variant":  "#353534",
+                                            "tertiary":  "#ffffff",
+                                            "tertiary_container":  "#e3e2e2",
+                                            "tertiary_fixed":  "#e3e2e2",
+                                            "tertiary_fixed_dim":  "#c7c6c6"
+                                        },
+                        "designMd":  "---\nname: Titan Industrial\ncolors:\n  surface: \u0027#131313\u0027\n  surface-dim: \u0027#131313\u0027\n  surface-bright: \u0027#393939\u0027\n  surface-container-lowest: \u0027#0e0e0e\u0027\n  surface-container-low: \u0027#1c1b1b\u0027\n  surface-container: \u0027#201f1f\u0027\n  surface-container-high: \u0027#2a2a2a\u0027\n  surface-container-highest: \u0027#353534\u0027\n  on-surface: \u0027#e5e2e1\u0027\n  on-surface-variant: \u0027#c4c7c8\u0027\n  inverse-surface: \u0027#e5e2e1\u0027\n  inverse-on-surface: \u0027#313030\u0027\n  outline: \u0027#8e9192\u0027\n  outline-variant: \u0027#444748\u0027\n  surface-tint: \u0027#c6c6c7\u0027\n  primary: \u0027#ffffff\u0027\n  on-primary: \u0027#2f3131\u0027\n  primary-container: \u0027#e2e2e2\u0027\n  on-primary-container: \u0027#636565\u0027\n  inverse-primary: \u0027#5d5f5f\u0027\n  secondary: \u0027#ffb3b1\u0027\n  on-secondary: \u0027#680011\u0027\n  secondary-container: \u0027#ad0224\u0027\n  on-secondary-container: \u0027#ffb8b5\u0027\n  tertiary: \u0027#ffffff\u0027\n  on-tertiary: \u0027#2f3031\u0027\n  tertiary-container: \u0027#e3e2e2\u0027\n  on-tertiary-container: \u0027#646464\u0027\n  error: \u0027#ffb4ab\u0027\n  on-error: \u0027#690005\u0027\n  error-container: \u0027#93000a\u0027\n  on-error-container: \u0027#ffdad6\u0027\n  primary-fixed: \u0027#e2e2e2\u0027\n  primary-fixed-dim: \u0027#c6c6c7\u0027\n  on-primary-fixed: \u0027#1a1c1c\u0027\n  on-primary-fixed-variant: \u0027#454747\u0027\n  secondary-fixed: \u0027#ffdad8\u0027\n  secondary-fixed-dim: \u0027#ffb3b1\u0027\n  on-secondary-fixed: \u0027#410007\u0027\n  on-secondary-fixed-variant: \u0027#92001c\u0027\n  tertiary-fixed: \u0027#e3e2e2\u0027\n  tertiary-fixed-dim: \u0027#c7c6c6\u0027\n  on-tertiary-fixed: \u0027#1b1c1c\u0027\n  on-tertiary-fixed-variant: \u0027#464747\u0027\n  background: \u0027#131313\u0027\n  on-background: \u0027#e5e2e1\u0027\n  surface-variant: \u0027#353534\u0027\ntypography:\n  display-lg:\n    fontFamily: Anton\n    fontSize: 84px\n    fontWeight: \u0027400\u0027\n    lineHeight: 90px\n    letterSpacing: 0.02em\n  headline-lg:\n    fontFamily: Anton\n    fontSize: 48px\n    fontWeight: \u0027400\u0027\n    lineHeight: 52px\n  headline-lg-mobile:\n    fontFamily: Anton\n    fontSize: 32px\n    fontWeight: \u0027400\u0027\n    lineHeight: 36px\n  title-md:\n    fontFamily: Hanken Grotesk\n    fontSize: 20px\n    fontWeight: \u0027700\u0027\n    lineHeight: 28px\n  body-md:\n    fontFamily: Hanken Grotesk\n    fontSize: 16px\n    fontWeight: \u0027400\u0027\n    lineHeight: 24px\n  label-sm:\n    fontFamily: JetBrains Mono\n    fontSize: 12px\n    fontWeight: \u0027500\u0027\n    lineHeight: 16px\n    letterSpacing: 0.05em\nspacing:\n  unit: 8px\n  gutter: 24px\n  margin-desktop: 64px\n  margin-mobile: 20px\n  container-max: 1440px\n---\n\n## Brand \u0026 Style\n\nThis design system is forged in the aesthetic of heavy-duty performance and industrial grit. It is engineered for a target audience that values strength, durability, and a no-nonsense approach to athletic excellence. The visual language is unapologetically bold, drawing heavily from **High-Contrast / Bold** and **Brutalist** influences to evoke a sense of \"Iron Tough\" reliability.\n\nThe emotional response should be one of motivation and uncompromising power. Large-scale typography acts as a structural element, while a moody, monochromatic base is punctuated by high-visibility accents. The interface should feel like high-end gym equipment: heavy, precise, and built to last.\n\nKey stylistic pillars:\n- **Raw Texture:** Use of grit, concrete-like overlays, and high-grain photography.\n- **Architectural Hierarchy:** Massive headlines that dominate the screen real estate.\n- **Functional Density:** Information is presented clearly with a focus on technical specifications and performance metrics.\n\n## Colors\n\nThe palette is rooted in a \"Deep Forge\" dark mode. It utilizes a high-contrast relationship between deep charcoal foundations and stark white primary elements to ensure maximum legibility under intense conditions.\n\n- **Primary (White):** Used for headlines and primary actions to cut through the dark atmosphere.\n- **Secondary (Crimson Pulse):** Reserved for urgent calls to action, \"on sale\" indicators, and critical performance alerts.\n- **Tertiary (Steel Gray):** Used for borders, secondary text, and inactive states.\n- **Neutral (Obsidian):** The foundation of the UI, using varying shades of near-black to create depth without losing the moody aesthetic.\n\nAvoid soft gradients; use solid blocks of color or hard-edged transitions to maintain the industrial feel.\n\n## Typography\n\nTypography is the most critical asset in this design system. We utilize **Anton** for headlines to provide a towering, condensed presence that mimics industrial signage. **Hanken Grotesk** provides a modern, legible balance for body copy, while **JetBrains Mono** is used for technical labels and \"specs\" to reinforce the engineering aspect of the brand.\n\n**Hierarchy Rules:**\n- All headlines must be uppercase.\n- Display type should use tight tracking to emphasize density.\n- Labels and secondary meta-data should use monospaced fonts to look like serial numbers or technical stamps.\n\n## Layout \u0026 Spacing\n\nThe layout follows a **Fixed Grid** system for desktop to maintain a premium, editorial feel, switching to a fluid model for mobile. We use an 8px spacing rhythm to ensure mathematical precision across all components.\n\n- **Desktop:** 12-column grid with generous 64px outer margins to allow the content to \"breathe\" despite the heavy visual style.\n- **Mobile:** 4-column grid with 20px margins.\n- **Vertical Rhythm:** Large sections should be separated by significant white space (80px+) to prevent the high-contrast elements from becoming overwhelming.\n\nContent should often be center-aligned in featured sections to create a \"heroic\" focus, while product grids should remain strictly aligned to the left for scanability.\n\n## Elevation \u0026 Depth\n\nThis system rejects soft shadows and traditional depth. Instead, it uses **Tonal Layers** and **Bold Outlines** to define hierarchy.\n\n- **Stacking:** Surface levels are defined by slight shifts in neutral hex codes (e.g., shifting from #121212 to #1A1A1A).\n- **Borders:** Use 1px or 2px solid strokes in Steel Gray or White to define card boundaries and input fields.\n- **Backdrop:** Backgrounds should utilize high-grain image overlays or subtle \"noise\" textures to simulate raw materials like steel or asphalt.\n- **Focus:** Elements \"pop\" not through elevation, but through stark color inversion (e.g., a white button on a black background).\n\n## Shapes\n\nThe shape language is strictly **Sharp (0)**. There are no rounded corners in this design system. Every button, card, and input field features hard 90-degree angles. This reinforces the industrial, \"built\" nature of the gear and aligns with the condensed, blocky nature of the typography.\n\nInternal elements like icons should also follow a sharp-angled or heavy-stroke geometric style.\n\n## Components\n\n### Buttons\n- **Primary:** Solid white background, black Anton text, uppercase. No border. Hard corners.\n- **Secondary:** Ghost style. 2px white border, white text, no background.\n- **Hover States:** Immediate color inversion. No soft transitions.\n\n### Cards\n- **Product Cards:** Full bleed imagery at the top. Hard black background for the info area. White text for titles, gray for prices.\n- **Badges:** Use the Secondary (Crimson Pulse) color for \"NEW\" or \"SALE\" badges, placed in the top-right corner with 0px radius.\n\n### Input Fields\n- Solid black background with a 1px Steel Gray border. \n- Text turns white on focus with the border becoming white.\n- Labels use JetBrains Mono in uppercase above the field.\n\n### Progress Bars / Performance Metrics\n- Heavy, thick bars using the Secondary color to show completion or intensity.\n- Always include a monospaced percentage or value label for a \"technical readout\" look.\n\n### Icons\n- Thick stroke (2px min), geometric, and strictly monochromatic. Avoid any rounded terminals on icon paths.",
+                        "colorVariant":  "FIDELITY",
+                        "overridePrimaryColor":  "#ffffff",
+                        "overrideSecondaryColor":  "#e63946",
+                        "overrideTertiaryColor":  "#8d8d8d",
+                        "overrideNeutralColor":  "#121212",
+                        "spacingScale":  2,
+                        "typography":  {
+                                           "body-md":  {
+                                                           "fontFamily":  "Hanken Grotesk",
+                                                           "fontSize":  "16px",
+                                                           "fontWeight":  "400",
+                                                           "lineHeight":  "24px"
+                                                       },
+                                           "display-lg":  {
+                                                              "fontFamily":  "Anton",
+                                                              "fontSize":  "84px",
+                                                              "fontWeight":  "400",
+                                                              "lineHeight":  "90px",
+                                                              "letterSpacing":  "0.02em"
+                                                          },
+                                           "headline-lg":  {
+                                                               "fontFamily":  "Anton",
+                                                               "fontSize":  "48px",
+                                                               "fontWeight":  "400",
+                                                               "lineHeight":  "52px"
+                                                           },
+                                           "headline-lg-mobile":  {
+                                                                      "fontFamily":  "Anton",
+                                                                      "fontSize":  "32px",
+                                                                      "fontWeight":  "400",
+                                                                      "lineHeight":  "36px"
+                                                                  },
+                                           "label-sm":  {
+                                                            "fontFamily":  "JetBrains Mono",
+                                                            "fontSize":  "12px",
+                                                            "fontWeight":  "500",
+                                                            "lineHeight":  "16px",
+                                                            "letterSpacing":  "0.05em"
+                                                        },
+                                           "title-md":  {
+                                                            "fontFamily":  "Hanken Grotesk",
+                                                            "fontSize":  "20px",
+                                                            "fontWeight":  "700",
+                                                            "lineHeight":  "28px"
+                                                        }
+                                       },
+                        "spacing":  {
+                                        "container-max":  "1440px",
+                                        "gutter":  "24px",
+                                        "margin-desktop":  "64px",
+                                        "margin-mobile":  "20px",
+                                        "unit":  "8px"
+                                    },
+                        "headlineFontFamily":  "Anton",
+                        "bodyFontFamily":  "Hanken Grotesk",
+                        "labelFontFamily":  "Jetbrains Mono"
+                    },
+    "screenInstances":  [
+                            {
+                                "id":  "1b41f21c779549ce899bc8fd1e6747bc",
+                                "sourceScreen":  "projects/305885712766358028/screens/1b41f21c779549ce899bc8fd1e6747bc",
+                                "x":  9915,
+                                "y":  5471,
+                                "width":  1280,
+                                "height":  3161
+                            },
+                            {
+                                "id":  "1c53f22d322e4505bc294a5fc0b69abe",
+                                "sourceScreen":  "projects/305885712766358028/screens/8a5242bc30d74268a7e8a5e25e5125d9",
+                                "x":  1920,
+                                "y":  5471,
+                                "width":  1401,
+                                "height":  3854
+                            },
+                            {
+                                "id":  "20053a3e41074c71a584cc5364b056e4",
+                                "sourceScreen":  "projects/305885712766358028/screens/20053a3e41074c71a584cc5364b056e4",
+                                "x":  1600,
+                                "width":  1280,
+                                "height":  5073,
+                                "isResized":  true
+                            },
+                            {
+                                "id":  "2648429a28254a8aa8faf40aa34eb930",
+                                "sourceScreen":  "projects/305885712766358028/screens/2648429a28254a8aa8faf40aa34eb930",
+                                "x":  23355,
+                                "y":  5471,
+                                "width":  1280,
+                                "height":  2376,
+                                "hidden":  true
+                            },
+                            {
+                                "id":  "3dc9e495beca4249a75be4562bf033ae",
+                                "sourceScreen":  "projects/305885712766358028/screens/9908f97541404d378d6c84c25e7c4b19",
+                                "x":  797,
+                                "y":  5481,
+                                "width":  1007,
+                                "height":  4210,
+                                "isResized":  true
+                            },
+                            {
+                                "id":  "4016fe23c52945df91d48bf785241a06",
+                                "sourceScreen":  "projects/305885712766358028/screens/4016fe23c52945df91d48bf785241a06",
+                                "x":  7227,
+                                "y":  5471,
+                                "width":  1280,
+                                "height":  4045,
+                                "label":  "Home | 180PT (Light)",
+                                "isResized":  true
+                            },
+                            {
+                                "id":  "62e9353379a14f7c806c7b7054dba5ea",
+                                "sourceScreen":  "projects/305885712766358028/screens/62e9353379a14f7c806c7b7054dba5ea",
+                                "x":  15291,
+                                "y":  5471,
+                                "width":  1280,
+                                "height":  4379,
+                                "hidden":  true
+                            },
+                            {
+                                "id":  "6f69bfaf28f3467da25b1c6a48b01529",
+                                "sourceScreen":  "projects/305885712766358028/screens/6f69bfaf28f3467da25b1c6a48b01529",
+                                "x":  26043,
+                                "y":  5471,
+                                "width":  1280,
+                                "height":  4535,
+                                "hidden":  true
+                            },
+                            {
+                                "id":  "83b55a0a4d954c4cacc8b5499ef98f75",
+                                "sourceScreen":  "projects/305885712766358028/screens/cb863cb6bc644355910399d95742f47a",
+                                "x":  4879,
+                                "y":  5471,
+                                "width":  1260,
+                                "height":  2013,
+                                "isResized":  true
+                            },
+                            {
+                                "id":  "83e24a37ffd64ccdb7174957432b3883",
+                                "sourceScreen":  "projects/305885712766358028/screens/83e24a37ffd64ccdb7174957432b3883",
+                                "x":  13947,
+                                "y":  5471,
+                                "width":  1280,
+                                "height":  3905,
+                                "hidden":  true
+                            },
+                            {
+                                "id":  "8c5e146e4a2e426297f873fa2cac4084",
+                                "sourceScreen":  "projects/305885712766358028/screens/8c5e146e4a2e426297f873fa2cac4084",
+                                "x":  19323,
+                                "y":  5471,
+                                "width":  1280,
+                                "height":  3455,
+                                "hidden":  true
+                            },
+                            {
+                                "id":  "92a91d7e24c04dc2813eac820e15c7d6",
+                                "sourceScreen":  "projects/305885712766358028/screens/92a91d7e24c04dc2813eac820e15c7d6",
+                                "x":  20667,
+                                "y":  5471,
+                                "width":  1280,
+                                "height":  4010,
+                                "hidden":  true
+                            },
+                            {
+                                "id":  "a4df5be7bd7446bbb460b7bef994b923",
+                                "sourceScreen":  "projects/305885712766358028/screens/a4df5be7bd7446bbb460b7bef994b923",
+                                "y":  5457,
+                                "width":  512,
+                                "height":  286
+                            },
+                            {
+                                "id":  "assets_71acd37ae85244d6914ab51fa04d1043",
+                                "x":  576,
+                                "width":  960,
+                                "height":  540,
+                                "sourceAsset":  "assets/71acd37ae85244d6914ab51fa04d1043",
+                                "type":  "DESIGN_SYSTEM_INSTANCE"
+                            },
+                            {
+                                "id":  "assets_b05b8c28ddb94357b7dc0907bdefa9db",
+                                "x":  6203,
+                                "y":  5471,
+                                "width":  960,
+                                "height":  540,
+                                "sourceAsset":  "assets/b05b8c28ddb94357b7dc0907bdefa9db",
+                                "type":  "DESIGN_SYSTEM_INSTANCE"
+                            },
+                            {
+                                "id":  "b7f8ac2791814e68b8b572b8cab2ccfd",
+                                "sourceScreen":  "projects/305885712766358028/screens/f8ee35c77c444864bf1d07f184e7a9e7",
+                                "x":  3396,
+                                "y":  5457,
+                                "width":  1338,
+                                "height":  3621
+                            },
+                            {
+                                "id":  "c52a5fb05b5c4f7ba86c8f032956a6c4",
+                                "sourceScreen":  "projects/305885712766358028/screens/c52a5fb05b5c4f7ba86c8f032956a6c4",
+                                "x":  22011,
+                                "y":  5471,
+                                "width":  1280,
+                                "height":  4151,
+                                "hidden":  true
+                            },
+                            {
+                                "id":  "c882c93ebef64bfda41e0bdf300f12e4",
+                                "sourceScreen":  "projects/305885712766358028/screens/c882c93ebef64bfda41e0bdf300f12e4",
+                                "x":  24699,
+                                "y":  5471,
+                                "width":  1280,
+                                "height":  1935,
+                                "hidden":  true
+                            },
+                            {
+                                "id":  "d15302bf9ca74da7918a227445315259",
+                                "sourceScreen":  "projects/305885712766358028/screens/d15302bf9ca74da7918a227445315259",
+                                "x":  17979,
+                                "y":  5471,
+                                "width":  1280,
+                                "height":  4004,
+                                "hidden":  true
+                            },
+                            {
+                                "id":  "d8fdf98c-bc04-490f-98ba-0a64d2041904",
+                                "sourceScreen":  "projects/305885712766358028/screens/4860224493969778855",
+                                "width":  512,
+                                "height":  2172,
+                                "type":  "SCREEN_INSTANCE"
+                            },
+                            {
+                                "id":  "e07f71c5048a46b6912fe6588e99ff62",
+                                "sourceScreen":  "projects/305885712766358028/screens/e07f71c5048a46b6912fe6588e99ff62",
+                                "x":  11259,
+                                "y":  5471,
+                                "width":  1280,
+                                "height":  2233
+                            },
+                            {
+                                "id":  "e2bf7b93bf284355a571d0d118f31aa8",
+                                "sourceScreen":  "projects/305885712766358028/screens/e2bf7b93bf284355a571d0d118f31aa8",
+                                "x":  27387,
+                                "y":  5471,
+                                "width":  1280,
+                                "height":  1951,
+                                "hidden":  true
+                            },
+                            {
+                                "id":  "e3cdfa7426b8473c8643480e3de4dfcb",
+                                "sourceScreen":  "projects/305885712766358028/screens/e3cdfa7426b8473c8643480e3de4dfcb",
+                                "x":  16635,
+                                "y":  5471,
+                                "width":  1280,
+                                "height":  3514,
+                                "hidden":  true
+                            },
+                            {
+                                "id":  "ec2b0e00013140f4918d75a378305222",
+                                "sourceScreen":  "projects/305885712766358028/screens/ec2b0e00013140f4918d75a378305222",
+                                "x":  8571,
+                                "y":  5471,
+                                "width":  1280,
+                                "height":  3811
+                            },
+                            {
+                                "id":  "ff47e85ef79c401ea12544c222c92840",
+                                "sourceScreen":  "projects/305885712766358028/screens/ff47e85ef79c401ea12544c222c92840",
+                                "x":  12603,
+                                "y":  5471,
+                                "width":  1280,
+                                "height":  4417,
+                                "hidden":  true
+                            }
+                        ],
+    "metadata":  {
+                     "userRole":  "OWNER"
+                 }
+}

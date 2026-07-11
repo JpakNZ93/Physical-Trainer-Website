@@ -29,9 +29,8 @@ Produces a static `out/` directory ready for Vercel deployment.
 ## Pages
 
 - `/` — Home
-- `/about` — About Us
+- `/about` — About Us & Meet Your Coach
 - `/services` — Services & Packages
-- `/trainers` — Meet Your Coach
 - `/contact` — Contact form (UI only)
 
 ## Deployment

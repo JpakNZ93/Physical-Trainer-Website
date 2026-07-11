@@ -1,0 +1,398 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Services | 180PT Personal Training</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Inter:wght@400;500;700&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind Config Verbatim -->
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "primary": "#000000",
+                "surface": "#fbf9f8",
+                "tertiary": "#000000",
+                "surface-container": "#efeded",
+                "inverse-surface": "#303031",
+                "on-primary": "#ffffff",
+                "background": "#fbf9f8",
+                "secondary-container": "#fc5a75",
+                "inverse-on-surface": "#f2f0f0",
+                "secondary": "#b42243",
+                "on-background": "#1b1c1c",
+                "on-primary-fixed-variant": "#474747",
+                "primary-fixed": "#e2e2e2",
+                "on-error": "#ffffff",
+                "tertiary-fixed": "#e2e2e2",
+                "error": "#ba1a1a",
+                "primary-fixed-dim": "#c6c6c6",
+                "surface-variant": "#e4e2e2",
+                "on-primary-fixed": "#1b1b1b",
+                "tertiary-container": "#1a1c1c",
+                "on-secondary-fixed": "#40000f",
+                "on-tertiary-fixed": "#1a1c1c",
+                "outline-variant": "#cfc4c5",
+                "on-surface": "#1b1c1c",
+                "on-surface-variant": "#4c4546",
+                "secondary-fixed": "#ffdadc",
+                "inverse-primary": "#c6c6c6",
+                "surface-container-lowest": "#ffffff",
+                "surface-dim": "#dbdad9",
+                "on-tertiary-container": "#838484",
+                "on-secondary-container": "#5f001b",
+                "surface-container-high": "#e9e8e7",
+                "outline": "#7e7576",
+                "on-error-container": "#93000a",
+                "on-tertiary-fixed-variant": "#454747",
+                "surface-container-low": "#f5f3f3",
+                "secondary-fixed-dim": "#ffb2b9",
+                "on-secondary-fixed-variant": "#91002e",
+                "error-container": "#ffdad6",
+                "on-secondary": "#ffffff",
+                "on-tertiary": "#ffffff",
+                "primary-container": "#1b1b1b",
+                "surface-tint": "#5e5e5e",
+                "on-primary-container": "#848484",
+                "surface-container-highest": "#e4e2e2",
+                "surface-bright": "#fbf9f8",
+                "tertiary-fixed-dim": "#c6c6c7"
+        },
+        "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+        },
+        "spacing": {
+                "unit": "4px",
+                "gutter": "24px",
+                "margin": "32px",
+                "container-max": "1280px"
+        },
+        "fontFamily": {
+                "body-lg": [
+                        "Inter"
+                ],
+                "body-md": [
+                        "Inter"
+                ],
+                "headline-lg-mobile": [
+                        "Anton"
+                ],
+                "headline-md": [
+                        "Anton"
+                ],
+                "headline-xl": [
+                        "Anton"
+                ],
+                "headline-lg": [
+                        "Anton"
+                ],
+                "label-mono": [
+                        "JetBrains Mono"
+                ]
+        },
+        "fontSize": {
+                "body-lg": [
+                        "18px",
+                        {
+                                "lineHeight": "1.6",
+                                "fontWeight": "400"
+                        }
+                ],
+                "body-md": [
+                        "16px",
+                        {
+                                "lineHeight": "1.5",
+                                "fontWeight": "400"
+                        }
+                ],
+                "headline-lg-mobile": [
+                        "36px",
+                        {
+                                "lineHeight": "1.1",
+                                "fontWeight": "400"
+                        }
+                ],
+                "headline-md": [
+                        "24px",
+                        {
+                                "lineHeight": "1.2",
+                                "fontWeight": "400"
+                        }
+                ],
+                "headline-xl": [
+                        "72px",
+                        {
+                                "lineHeight": "1.0",
+                                "fontWeight": "400"
+                        }
+                ],
+                "headline-lg": [
+                        "48px",
+                        {
+                                "lineHeight": "1.1",
+                                "fontWeight": "400"
+                        }
+                ],
+                "label-mono": [
+                        "14px",
+                        {
+                                "lineHeight": "1.4",
+                                "letterSpacing": "0.05em",
+                                "fontWeight": "500"
+                        }
+                ]
+        }
+},
+    },
+  }
+</script>
+<style>
+        body {
+            background-color: #fbf9f8;
+            color: #1b1c1c;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+        .grain-overlay {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            pointer-events: none;
+            z-index: 99;
+            opacity: 0.05;
+            background-image: url("https://www.transparenttextures.com/patterns/carbon-fibre.png");
+            mix-blend-mode: multiply;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .industrial-hover:hover {
+            box-shadow: 8px 8px 0px 0px rgba(0, 0, 0, 1);
+            transform: translate(-4px, -4px);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background">
+<div class="grain-overlay"></div>
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-background border-b-2 border-outline">
+<div class="flex justify-between items-center px-margin md:px-gutter py-4 max-w-container-max mx-auto">
+<div class="font-headline-lg text-headline-md tracking-tighter text-primary">180PT</div>
+<div class="hidden md:flex gap-8">
+<a class="text-on-surface-variant uppercase font-label-mono text-label-mono hover:text-primary transition-colors" href="#">TRAINING</a>
+<a class="text-on-surface-variant uppercase font-label-mono text-label-mono hover:text-primary transition-colors" href="#">BOXING</a>
+<a class="text-on-surface-variant uppercase font-label-mono text-label-mono hover:text-primary transition-colors" href="#">GROUP</a>
+<a class="text-on-surface-variant uppercase font-label-mono text-label-mono hover:text-primary transition-colors" href="#">ONLINE</a>
+<a class="text-primary border-b-2 border-primary pb-1 uppercase font-label-mono text-label-mono" href="#">PRICING</a>
+</div>
+<button class="bg-primary text-on-primary font-headline-md text-[18px] px-6 py-2 uppercase hover:bg-secondary hover:text-on-secondary transition-colors active:scale-95 duration-100">
+                JOIN NOW
+            </button>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative h-[600px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center grayscale contrast-125 brightness-90" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDpol9_M7PcRfhAN1nYxvuM3fPX_oNGNCWqszIneKvjQjmuliMLMpummrGZ5MJOLw5we8v7TtyFo_TmzzOB0jsOyasHAm1jzcXDyhRbURuqivGErNiPEcvTWVogjSS3umarBTJ5SVN1WAq_cLhlp0ft9C4uY8Za7d1Dm6fAwqpXX7SkptqTo8XhbqWOawK3JO_GjOpXx37OziZNPs-um0h0lhzg4sACdEZHZPYyavfMTEEzylzY3NHO8K1vZbv3Jo1P8tUKSDIosw')">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent"></div>
+</div>
+<div class="relative z-10 px-margin md:px-gutter max-w-container-max mx-auto w-full">
+<div class="max-w-4xl">
+<h1 class="font-headline-xl text-headline-xl md:text-[120px] uppercase leading-none mb-6 text-primary">SERVICES</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl bg-background/60 backdrop-blur-sm p-2 inline-block">
+                        Professional coaching tailored to your goals, fitness level, and lifestyle. Engineered for performance, built for results.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Training Programs Bento Grid -->
+<section class="py-24 px-margin md:px-gutter max-w-container-max mx-auto">
+<div class="flex items-center gap-4 mb-12">
+<div class="h-1.5 w-20 bg-secondary"></div>
+<h2 class="font-headline-lg text-headline-lg uppercase text-primary">TRAINING PROGRAMS</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Personal Training -->
+<div class="md:col-span-7 bg-surface-container-lowest border-2 border-primary p-10 flex flex-col justify-between transition-all duration-200 industrial-hover group">
+<div>
+<div class="flex justify-between items-start mb-8">
+<span class="material-symbols-outlined text-4xl text-primary" style="font-variation-settings: 'FILL' 1;">fitness_center</span>
+<span class="font-label-mono text-label-mono text-on-surface-variant uppercase">01 / INDIVIDUAL</span>
+</div>
+<h3 class="font-headline-lg text-headline-md uppercase mb-4 text-primary">PERSONAL TRAINING</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">One-on-one coaching tailored specifically to your goals.</p>
+<ul class="grid grid-cols-1 sm:grid-cols-2 gap-y-3 font-label-mono text-label-mono uppercase tracking-wider">
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-secondary"></span> Weight Loss</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-secondary"></span> Muscle Building</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-secondary"></span> Strength Training</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-secondary"></span> Injury Prevention</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-secondary"></span> Fitness Improvement</li>
+</ul>
+</div>
+</div>
+<!-- Boxing Training -->
+<div class="md:col-span-5 bg-surface-container-low border border-outline p-10 flex flex-col justify-between transition-all duration-200 industrial-hover group overflow-hidden relative">
+<div class="absolute top-0 right-0 p-4 opacity-5">
+<span class="material-symbols-outlined text-9xl">sports_martial_arts</span>
+</div>
+<div class="relative z-10">
+<div class="flex justify-between items-start mb-8">
+<span class="material-symbols-outlined text-4xl text-primary" style="font-variation-settings: 'FILL' 1;">sports_mma</span>
+<span class="font-label-mono text-label-mono text-on-surface-variant uppercase">02 / COMBAT</span>
+</div>
+<h3 class="font-headline-lg text-headline-md uppercase mb-4 text-primary">BOXING TRAINING</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Improve your: Fitness, Coordination, Confidence, Technique, Conditioning.</p>
+<div class="bg-primary text-on-primary inline-block px-3 py-1 font-label-mono text-[10px] uppercase mb-4">Suitable for beginners to advanced</div>
+</div>
+</div>
+<!-- Small Group Training -->
+<div class="md:col-span-5 bg-surface-container-low border border-outline p-10 flex flex-col justify-between transition-all duration-200 industrial-hover">
+<div>
+<div class="flex justify-between items-start mb-8">
+<span class="material-symbols-outlined text-4xl text-primary" style="font-variation-settings: 'FILL' 1;">groups</span>
+<span class="font-label-mono text-label-mono text-on-surface-variant uppercase">03 / COLLECTIVE</span>
+</div>
+<h3 class="font-headline-lg text-headline-md uppercase mb-4 text-primary">SMALL GROUP TRAINING</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Train with friends while staying motivated together.</p>
+<div class="space-y-2 font-label-mono text-label-mono uppercase opacity-70 mb-6">
+<p class="">• Affordable &amp; Fun</p>
+<p class="">• High Energy Environment</p>
+<p class="">• Personal Coaching</p>
+</div>
+<div class="text-secondary font-label-mono text-label-mono italic uppercase tracking-tighter">Minimum 3–4 people</div>
+</div>
+</div>
+<!-- Online Coaching -->
+<div class="md:col-span-7 bg-surface-container-highest border-2 border-primary p-10 flex flex-col md:flex-row gap-8 transition-all duration-200 industrial-hover">
+<div class="flex-1">
+<div class="flex justify-between items-start mb-8">
+<span class="material-symbols-outlined text-4xl text-primary" style="font-variation-settings: 'FILL' 1;">language</span>
+<span class="font-label-mono text-label-mono text-on-surface-variant uppercase">04 / REMOTE</span>
+</div>
+<h3 class="font-headline-lg text-headline-md uppercase mb-4 text-primary">ONLINE COACHING</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Train anywhere with personalised programs and ongoing support.</p>
+</div>
+<div class="flex-1 border-l border-outline-variant pl-8">
+<ul class="space-y-4 font-label-mono text-label-mono uppercase">
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary text-lg">check_circle</span> Custom Program</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary text-lg">check_circle</span> Weekly Check-ins</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary text-lg">check_circle</span> Progress Tracking</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary text-lg">check_circle</span> Nutrition Guidance</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- Packages / Pricing -->
+<section class="py-24 bg-surface-container-high relative border-y border-outline">
+<div class="px-margin md:px-gutter max-w-container-max mx-auto relative z-10">
+<div class="text-center mb-16">
+<h2 class="font-headline-xl text-[64px] uppercase mb-4 text-primary">TRAINING PACKAGES</h2>
+<p class="font-label-mono text-label-mono text-secondary uppercase tracking-[0.2em] font-bold">Select your intensity level</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Package 1 -->
+<div class="bg-surface-container-lowest border-2 border-primary p-8 flex flex-col h-full shadow-sm">
+<div class="font-label-mono text-label-mono text-on-surface-variant mb-4 uppercase">Base Intensity</div>
+<h4 class="font-headline-lg text-headline-md mb-6 leading-tight text-primary">2 X 45 MIN SESSIONS</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mb-12 flex-grow">per week</p>
+<button class="w-full bg-primary text-on-primary font-headline-md text-[16px] py-4 uppercase hover:bg-secondary transition-colors duration-100">
+                            Book a Free Consultation
+                        </button>
+</div>
+<!-- Package 2 -->
+<div class="bg-primary p-8 flex flex-col h-full border-2 border-primary transform md:-translate-y-4 shadow-2xl">
+<div class="font-label-mono text-label-mono text-secondary-container mb-4 uppercase font-bold">Most Popular</div>
+<h4 class="font-headline-lg text-headline-md mb-6 leading-tight text-on-primary">3 X 45 MIN SESSIONS</h4>
+<p class="font-body-md text-body-md text-primary-fixed-dim mb-12 flex-grow">per week</p>
+<button class="w-full bg-surface text-primary font-headline-md text-[16px] py-4 uppercase hover:bg-secondary hover:text-on-secondary transition-colors duration-100">
+                            Book a Free Consultation
+                        </button>
+</div>
+<!-- Package 3 (Group) -->
+<div class="bg-surface-container-lowest border-2 border-primary p-8 flex flex-col h-full shadow-sm">
+<div class="font-label-mono text-label-mono text-on-surface-variant mb-4 uppercase">Team Performance</div>
+<h4 class="font-headline-lg text-headline-md mb-6 leading-tight text-primary">SMALL GROUP TRAINING</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mb-12 flex-grow">per person — minimum 4 people</p>
+<button class="w-full bg-transparent border-2 border-primary text-primary font-headline-md text-[16px] py-4 uppercase hover:bg-primary hover:text-on-primary transition-colors duration-100">
+                            Book a Free Consultation
+                        </button>
+</div>
+<!-- Package 4 (Online) -->
+<div class="bg-surface-container-lowest border-2 border-primary p-8 flex flex-col h-full shadow-sm">
+<div class="font-label-mono text-label-mono text-on-surface-variant mb-4 uppercase">Remote Access</div>
+<h4 class="font-headline-lg text-headline-md mb-6 leading-tight text-primary">ONLINE COACHING</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mb-12 flex-grow">per session</p>
+<button class="w-full bg-transparent border-2 border-primary text-primary font-headline-md text-[16px] py-4 uppercase hover:bg-primary hover:text-on-primary transition-colors duration-100">
+                            Book a Free Consultation
+                        </button>
+</div>
+</div>
+</div>
+<!-- Background texture text -->
+<div class="absolute bottom-0 left-0 w-full overflow-hidden pointer-events-none opacity-[0.05] translate-y-1/2">
+<div class="whitespace-nowrap font-headline-xl text-[300px] leading-none uppercase text-primary">
+                    STRENGTH • ENDURANCE • POWER • STRENGTH • ENDURANCE • POWER
+                </div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="py-32 px-margin md:px-gutter text-center bg-primary"><div class="max-w-4xl mx-auto">
+<h2 class="font-headline-xl text-headline-xl uppercase mb-8 text-on-primary">READY TO COMMIT?</h2>
+<div class="h-2 w-32 bg-secondary mx-auto mb-12"></div>
+<p class="font-body-lg text-body-lg text-primary-fixed-dim mb-12">
+                    Join 180PT and transform your potential into performance. Our coaches are waiting to build your blueprint.
+                </p>
+<div class="flex flex-col md:flex-row justify-center gap-6">
+<a class="bg-surface text-primary font-headline-md text-[24px] px-12 py-6 uppercase hover:bg-secondary hover:text-on-secondary transition-all active:scale-95" href="#">JOIN THE TEAM</a>
+<a class="border-2 border-surface text-on-primary font-headline-md text-[24px] px-12 py-6 uppercase hover:bg-surface hover:text-primary transition-all active:scale-95" href="#">VIEW LOCATIONS</a>
+</div>
+</div></section>
+</main>
+<!-- Footer -->
+<footer class="w-full bg-surface-container border-t-2 border-outline">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin md:px-gutter py-12 max-w-container-max mx-auto">
+<div class="flex flex-col gap-2 mb-8 md:mb-0">
+<div class="font-headline-lg text-headline-md text-primary">180PT</div>
+<p class="font-label-mono text-label-mono text-on-surface-variant">© 2024 180PT PERFORMANCE. BUILT TO LAST.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-8 font-label-mono text-label-mono">
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">PRIVACY</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">TERMS</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">CAREERS</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">LOCATIONS</a>
+</div>
+<div class="mt-8 md:mt-0 flex gap-4">
+<a class="w-10 h-10 border border-outline flex items-center justify-center hover:bg-primary hover:text-on-primary transition-all" href="#">
+<span class="material-symbols-outlined text-lg">share</span>
+</a>
+<a class="w-10 h-10 border border-outline flex items-center justify-center hover:bg-primary hover:text-on-primary transition-all" href="#">
+<span class="material-symbols-outlined text-lg">campaign</span>
+</a>
+</div>
+</div>
+</footer>
+<script>
+        // Simple scroll interaction for header
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('bg-opacity-95', 'backdrop-blur-md');
+            } else {
+                nav.classList.remove('bg-opacity-95', 'backdrop-blur-md');
+            }
+        });
+    </script>
+
+
+</body></html>

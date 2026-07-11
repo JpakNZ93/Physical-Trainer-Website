@@ -1,62 +1,95 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
-import { Menu, X } from "lucide-react";
-import { Logo } from "./Logo";
-import { CTAButton } from "./CTAButton";
+import { usePathname } from "next/navigation";
+import { Logo } from "@/components/Logo";
 import { navLinks } from "@/lib/constants";
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
+
+  useEffect(() => {
+    document.body.style.overflow = isOpen ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isOpen]);
+
+  useEffect(() => {
+    setIsOpen(false);
+  }, [pathname]);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/10 bg-brand-black/90 backdrop-blur-md">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 md:px-6">
-        <Logo />
+    <header className="fixed top-0 z-50 flex h-20 w-full items-center justify-between border-b border-outline-variant bg-background px-page md:bg-background/95 md:backdrop-blur-sm">
+      <div className="flex items-center gap-12">
+        <Logo size="header" />
 
-        <nav className="hidden items-center gap-6 lg:flex">
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="text-sm font-medium uppercase tracking-wide text-white/80 transition-colors hover:text-brand-yellow"
-            >
-              {link.label}
-            </Link>
-          ))}
-        </nav>
-
-        <div className="hidden lg:block">
-          <CTAButton href="/contact">Book a Free Consultation</CTAButton>
-        </div>
-
-        <button
-          type="button"
-          className="text-white lg:hidden"
-          onClick={() => setIsOpen(!isOpen)}
-          aria-label={isOpen ? "Close menu" : "Open menu"}
-        >
-          {isOpen ? <X size={28} /> : <Menu size={28} />}
-        </button>
-      </div>
-
-      {isOpen && (
-        <div className="border-t border-white/10 bg-brand-black px-4 py-6 lg:hidden">
-          <nav className="flex flex-col gap-4">
-            {navLinks.map((link) => (
+        <nav className="hidden gap-8 md:flex">
+          {navLinks.map((link) => {
+            const isActive = pathname === link.href;
+            return (
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-sm font-medium uppercase tracking-wide text-white/80 transition-colors hover:text-brand-yellow"
-                onClick={() => setIsOpen(false)}
+                className={`text-body-md uppercase tracking-wider transition-none ${
+                  isActive
+                    ? "border-b-2 border-primary pb-1 text-primary"
+                    : "text-on-surface-variant hover:text-primary"
+                }`}
               >
                 {link.label}
               </Link>
-            ))}
-            <CTAButton href="/contact" className="mt-2 w-full text-center">
+            );
+          })}
+        </nav>
+      </div>
+
+      <Link
+        href="/contact"
+        className="hidden bg-primary px-8 py-3 font-label text-label-sm uppercase tracking-widest text-on-primary transition-none hover:bg-secondary hover:text-on-secondary md:inline-block"
+      >
+        Book a Free Consultation
+      </Link>
+
+      <button
+        type="button"
+        className="touch-manipulation p-2 text-primary md:hidden"
+        onClick={() => setIsOpen(!isOpen)}
+        aria-expanded={isOpen}
+        aria-label={isOpen ? "Close menu" : "Open menu"}
+      >
+        <span className="material-symbols-outlined text-3xl">
+          {isOpen ? "close" : "menu"}
+        </span>
+      </button>
+
+      {isOpen && (
+        <div className="absolute top-20 left-0 w-full border-b border-outline-variant bg-background px-page py-6 md:hidden">
+          <nav className="flex flex-col gap-4">
+            {navLinks.map((link) => {
+              const isActive = pathname === link.href;
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={`text-body-md uppercase tracking-wider transition-none ${
+                    isActive ? "text-primary" : "text-on-surface-variant hover:text-primary"
+                  }`}
+                  onClick={() => setIsOpen(false)}
+                >
+                  {link.label}
+                </Link>
+              );
+            })}
+            <Link
+              href="/contact"
+              className="mt-2 bg-primary px-8 py-3 text-center font-label text-label-sm uppercase tracking-widest text-on-primary transition-none hover:bg-secondary hover:text-on-secondary"
+              onClick={() => setIsOpen(false)}
+            >
               Book a Free Consultation
-            </CTAButton>
+            </Link>
           </nav>
         </div>
       )}

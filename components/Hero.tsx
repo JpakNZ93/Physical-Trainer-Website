@@ -1,35 +1,45 @@
-import { CTAButton } from "./CTAButton";
-import { PlaceholderImage } from "./PlaceholderImage";
+import Link from "next/link";
+import { HeroMedia } from "@/components/HeroMedia";
 
-interface HeroProps {
-  showCTAs?: boolean;
-}
-
-export function Hero({ showCTAs = true }: HeroProps) {
+export function Hero() {
   return (
-    <section className="relative min-h-[70vh] flex items-center">
-      <div className="absolute inset-0">
-        <PlaceholderImage label="Gym Hero Image" aspectRatio="hero" className="h-full w-full" />
-        <div className="absolute inset-0 bg-black/70" />
+    <section className="relative flex h-[min(921px,100svh)] w-full items-center overflow-hidden">
+      <div className="absolute inset-0 z-0">
+        <HeroMedia />
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
       </div>
 
-      <div className="relative z-10 mx-auto max-w-7xl px-4 py-20 md:px-6">
-        <h1 className="max-w-3xl text-4xl font-black uppercase italic leading-tight tracking-wide md:text-6xl lg:text-7xl">
-          Turning <span className="text-brand-yellow not-italic">Lives</span> Around
-        </h1>
-        <p className="mt-4 text-lg font-semibold uppercase tracking-widest text-white/90 md:text-xl">
+      <div className="relative z-10 max-w-4xl px-page">
+        <span className="mb-4 block font-label text-label-sm uppercase tracking-[0.3em] text-secondary">
           Private Personal Training
+        </span>
+        <h1 className="font-headline text-display-lg mb-6 uppercase leading-none text-primary">
+          Turning Lives
+          <br />
+          Around
+        </h1>
+        <p className="mb-10 max-w-xl text-base text-on-surface-variant md:text-lg">
+          Helping everyday people become stronger, healthier, and more confident through professional
+          coaching and real accountability.
         </p>
-        <p className="mt-6 max-w-xl text-lg text-white/70">
-          Helping everyday people become stronger, healthier, and more confident through
-          professional coaching and real accountability.
-        </p>
+        <div className="flex flex-col gap-4 sm:flex-row sm:flex-wrap">
+          <Link
+            href="/contact"
+            className="touch-manipulation bg-primary px-8 py-4 text-center font-label text-sm uppercase tracking-widest text-on-primary transition-none hover:bg-secondary hover:text-on-secondary sm:px-10 sm:py-5 sm:text-base"
+          >
+            Book a Free Consultation
+          </Link>
+          <Link
+            href="/about"
+            className="touch-manipulation border-2 border-primary px-8 py-4 text-center font-label text-sm uppercase tracking-widest text-primary transition-none hover:bg-primary hover:text-on-primary sm:px-10 sm:py-5 sm:text-base"
+          >
+            View Success Stories
+          </Link>
+        </div>
+      </div>
 
-        {showCTAs && (
-          <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-            <CTAButton href="/contact">Book a Free Consultation</CTAButton>
-          </div>
-        )}
+      <div className="absolute bottom-10 left-[var(--spacing-margin-mobile)] hidden animate-bounce md:left-[var(--spacing-margin-desktop)] md:block">
+        <span className="material-symbols-outlined scale-150 text-primary">expand_more</span>
       </div>
     </section>
   );
