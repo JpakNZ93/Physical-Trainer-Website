@@ -148,12 +148,6 @@ export function AboutPageContent({ className = "" }: AboutPageContentProps) {
             >
               Book a Free Consultation
             </Link>
-            <Link
-              href="/"
-              className="touch-manipulation border-2 border-on-primary px-8 py-4 text-center font-headline text-headline-md uppercase tracking-tight text-on-primary transition-all hover:bg-on-primary hover:text-primary sm:px-12 sm:py-5"
-            >
-              View Success Stories
-            </Link>
           </div>
         </div>
       </section>
