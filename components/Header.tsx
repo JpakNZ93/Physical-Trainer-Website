@@ -22,7 +22,7 @@ export function Header() {
   }, [pathname]);
 
   return (
-    <header className="fixed top-0 z-50 flex h-20 w-full items-center justify-between border-b border-outline-variant bg-background px-page md:bg-background/95 md:backdrop-blur-sm">
+    <header className="fixed top-0 z-50 flex h-20 w-full items-center justify-between border-b border-white/10 bg-primary px-page md:border-outline-variant md:bg-background/95 md:backdrop-blur-sm">
       <div className="flex items-center gap-12">
         <Logo size="header" />
 
@@ -55,7 +55,7 @@ export function Header() {
 
       <button
         type="button"
-        className="touch-manipulation p-2 text-primary md:hidden"
+        className="touch-manipulation p-2 text-on-primary md:hidden"
         onClick={() => setIsOpen(!isOpen)}
         aria-expanded={isOpen}
         aria-label={isOpen ? "Close menu" : "Open menu"}
