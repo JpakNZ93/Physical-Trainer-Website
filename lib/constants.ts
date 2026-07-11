@@ -42,8 +42,8 @@ export const aboutImages = {
 
 export const heroMedia = {
   video: "/videos/Park_Boxing.mp4",
-  poster: "/images/hero_group_img.png",
-  mobilePoster: "/images/hero-mobile.jpg",
+  poster: "/images/hero-frames/hero-frame-4.jpg",
+  mobilePoster: "/images/hero-frames/hero-frame-4.jpg",
 };
 
 export const stitchImages = {
