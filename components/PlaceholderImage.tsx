@@ -1,5 +1,9 @@
+import Image from "next/image";
+
 interface PlaceholderImageProps {
   label: string;
+  src?: string;
+  alt?: string;
   aspectRatio?: "hero" | "portrait" | "square" | "wide";
   className?: string;
 }
@@ -13,17 +17,33 @@ const aspectClasses = {
 
 export function PlaceholderImage({
   label,
+  src,
+  alt,
   aspectRatio = "square",
   className = "",
 }: PlaceholderImageProps) {
+  const aspectClass = className.includes("h-full") ? "" : aspectClasses[aspectRatio];
+
   return (
     <div
-      className={`relative flex items-center justify-center overflow-hidden bg-brand-grey border border-white/10 ${aspectClasses[aspectRatio]} ${className}`}
+      className={`relative flex items-center justify-center overflow-hidden bg-brand-grey border border-white/10 ${aspectClass} ${className}`}
     >
-      <div className="absolute inset-0 bg-gradient-to-br from-brand-grey to-brand-black" />
-      <span className="relative z-10 px-4 text-center text-sm font-semibold uppercase tracking-wider text-white/50">
-        {label}
-      </span>
+      {src ? (
+        <Image
+          src={src}
+          alt={alt ?? label}
+          fill
+          sizes="(max-width: 1024px) 100vw, 50vw"
+          className="object-cover"
+        />
+      ) : (
+        <>
+          <div className="absolute inset-0 bg-gradient-to-br from-brand-grey to-brand-black" />
+          <span className="relative z-10 px-4 text-center text-sm font-semibold uppercase tracking-wider text-white/50">
+            {label}
+          </span>
+        </>
+      )}
     </div>
   );
 }
