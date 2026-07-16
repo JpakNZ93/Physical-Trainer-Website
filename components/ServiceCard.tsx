@@ -1,8 +1,11 @@
+import Image from "next/image";
 import { User, Users, Laptop, Check } from "lucide-react";
 
 interface ServiceCardProps {
   title: string;
   icon: "user" | "boxing" | "users" | "laptop";
+  image?: string;
+  imageAlt?: string;
   description: string;
   subtitle?: string;
   items: string[];
@@ -25,6 +28,8 @@ const iconMap = {
 export function ServiceCard({
   title,
   icon,
+  image,
+  imageAlt,
   description,
   subtitle,
   items,
@@ -33,30 +38,43 @@ export function ServiceCard({
   const Icon = iconMap[icon];
 
   return (
-    <div className="flex flex-col border border-white/10 bg-brand-grey p-6">
-      <div className="mb-4 text-brand-yellow">
-        <Icon />
-      </div>
-      <h3 className="mb-3 text-lg font-bold uppercase tracking-wider text-brand-yellow">
-        {title}
-      </h3>
-      <p className="mb-4 text-sm text-white/70">{description}</p>
-      {subtitle && (
-        <p className="mb-2 text-sm font-semibold text-white/90">{subtitle}</p>
+    <div className="flex flex-col overflow-hidden border border-white/10 bg-brand-grey">
+      {image && (
+        <div className="relative aspect-[4/3] w-full">
+          <Image
+            src={image}
+            alt={imageAlt ?? title}
+            fill
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+            className="object-cover"
+          />
+        </div>
       )}
-      <ul className="flex flex-col gap-2">
-        {items.map((item) => (
-          <li key={item} className="flex items-start gap-2 text-sm text-white/70">
-            {icon === "users" && title === "Small Group Training" ? (
-              <Check className="mt-0.5 h-4 w-4 shrink-0 text-brand-yellow" />
-            ) : (
-              <span className="text-brand-yellow">•</span>
-            )}
-            {item}
-          </li>
-        ))}
-      </ul>
-      {footer && <p className="mt-4 text-sm text-white/60">{footer}</p>}
+      <div className="flex flex-1 flex-col p-6">
+        <div className="mb-4 text-brand-yellow">
+          <Icon />
+        </div>
+        <h3 className="mb-3 text-lg font-bold uppercase tracking-wider text-brand-yellow">
+          {title}
+        </h3>
+        <p className="mb-4 text-sm text-white/70">{description}</p>
+        {subtitle && (
+          <p className="mb-2 text-sm font-semibold text-white/90">{subtitle}</p>
+        )}
+        <ul className="flex flex-col gap-2">
+          {items.map((item) => (
+            <li key={item} className="flex items-start gap-2 text-sm text-white/70">
+              {icon === "users" && title === "Small Group Training" ? (
+                <Check className="mt-0.5 h-4 w-4 shrink-0 text-brand-yellow" />
+              ) : (
+                <span className="text-brand-yellow">•</span>
+              )}
+              {item}
+            </li>
+          ))}
+        </ul>
+        {footer && <p className="mt-4 text-sm text-white/60">{footer}</p>}
+      </div>
     </div>
   );
 }

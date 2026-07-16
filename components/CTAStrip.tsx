@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { CTAButton } from "./CTAButton";
 
 interface CTAStripProps {
@@ -6,6 +7,7 @@ interface CTAStripProps {
   buttonText: string;
   buttonHref?: string;
   description?: string;
+  backgroundImage?: string;
 }
 
 export function CTAStrip({
@@ -14,14 +16,29 @@ export function CTAStrip({
   buttonText,
   buttonHref = "/contact",
   description,
+  backgroundImage,
 }: CTAStripProps) {
   const highlightIndex =
     highlight && headline ? headline.lastIndexOf(highlight) : -1;
   const hasHighlight = highlightIndex >= 0 && highlight;
 
   return (
-    <section className="bg-brand-grey py-16">
-      <div className="mx-auto max-w-4xl px-4 text-center md:px-6">
+    <section className="relative overflow-hidden bg-brand-grey py-16">
+      {backgroundImage && (
+        <>
+          <Image
+            src={backgroundImage}
+            alt=""
+            fill
+            sizes="100vw"
+            className="object-cover"
+            aria-hidden="true"
+          />
+          <div className="absolute inset-0 bg-brand-black/80" />
+        </>
+      )}
+
+      <div className="relative z-10 mx-auto max-w-4xl px-4 text-center md:px-6">
         <h2 className="text-3xl font-black uppercase tracking-wide md:text-4xl">
           {hasHighlight ? (
             <>

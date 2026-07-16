@@ -1,6 +1,8 @@
 import { Hero } from "@/components/Hero";
 import { FeatureBar } from "@/components/FeatureBar";
 import { CTAStrip } from "@/components/CTAStrip";
+import { PlaceholderImage } from "@/components/PlaceholderImage";
+import { pageImages } from "@/lib/constants";
 
 export default function HomePage() {
   return (
@@ -22,7 +24,14 @@ export default function HomePage() {
             training, expert coaching, and ongoing support.
           </p>
 
-          <div className="mt-12">
+          <div className="mt-12 grid items-center gap-12 lg:grid-cols-2">
+            <PlaceholderImage
+              label="Training at 180PT"
+              src={pageImages.homeMotivation}
+              alt="Group training session at 180PT"
+              aspectRatio="wide"
+              className="w-full"
+            />
             <FeatureBar />
           </div>
         </div>
@@ -33,6 +42,7 @@ export default function HomePage() {
         highlight="You"
         description="Start today and discover how 180PT can help you build a stronger body, stronger mind, and stronger life."
         buttonText="Book a Free Consultation"
+        backgroundImage={pageImages.ctaBackground}
       />
     </>
   );

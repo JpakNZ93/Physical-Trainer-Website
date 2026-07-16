@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { ServiceCard } from "@/components/ServiceCard";
 import { PackageCard } from "@/components/PackageCard";
-import { services, packages } from "@/lib/constants";
+import { PlaceholderImage } from "@/components/PlaceholderImage";
+import { pageImages, packages, services } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Services",
@@ -12,16 +13,31 @@ export const metadata: Metadata = {
 export default function ServicesPage() {
   return (
     <>
-      <section className="py-16 md:py-24">
-        <div className="mx-auto max-w-7xl px-4 md:px-6">
+      <section className="relative flex min-h-[40vh] items-end">
+        <div className="absolute inset-0">
+          <PlaceholderImage
+            label="Services Hero"
+            src={pageImages.servicesHero}
+            alt="180PT training services"
+            aspectRatio="hero"
+            className="h-full w-full"
+          />
+          <div className="absolute inset-0 bg-black/60" />
+        </div>
+
+        <div className="relative z-10 mx-auto w-full max-w-7xl px-4 py-16 md:px-6 md:py-24">
           <h1 className="text-4xl font-black uppercase tracking-wide text-white md:text-5xl">
             Services
           </h1>
-          <p className="mt-4 max-w-2xl text-white/70">
+          <p className="mt-4 max-w-2xl text-white/80">
             Professional coaching tailored to your goals, fitness level, and lifestyle.
           </p>
+        </div>
+      </section>
 
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      <section className="py-16 md:py-24">
+        <div className="mx-auto max-w-7xl px-4 md:px-6">
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {services.map((service) => (
               <ServiceCard key={service.title} {...service} />
             ))}

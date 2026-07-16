@@ -41,12 +41,16 @@ export const pageImages = {
   aboutHero: "/images/hero_group_img.png",
   servicesHero: "/images/Hero3.jpg",
   contactHero: "/images/group_img.jpeg",
+  homeMotivation: "/images/hero_group_img.png",
+  ctaBackground: "/images/hero-frames/hero-frame-5.jpg",
 };
 
 export const services = [
   {
     title: "Personal Training",
     icon: "user" as const,
+    image: "/images/hero-frames/hero-frame-1.jpg",
+    imageAlt: "One-on-one personal training at 180PT",
     description: "One-on-one coaching tailored specifically to your goals.",
     subtitle: "Perfect for:",
     items: [
@@ -60,6 +64,8 @@ export const services = [
   {
     title: "Boxing Training",
     icon: "boxing" as const,
+    image: "/images/hero-frames/hero-frame-2.jpg",
+    imageAlt: "Boxing training session at 180PT",
     description: "Improve your:",
     items: [
       "Fitness",
@@ -73,6 +79,8 @@ export const services = [
   {
     title: "Small Group Training",
     icon: "users" as const,
+    image: "/images/group_img.jpeg",
+    imageAlt: "Small group training at 180PT",
     description: "Train with friends while staying motivated together.",
     items: ["Affordable", "Fun", "High Energy", "Personal Coaching"],
     footer: "Minimum 3–4 people.",
@@ -80,6 +88,8 @@ export const services = [
   {
     title: "Online Coaching",
     icon: "laptop" as const,
+    image: "/images/hero-frames/hero-frame-3.jpg",
+    imageAlt: "Online coaching support from 180PT",
     description: "Train anywhere with personalised programs and ongoing support.",
     subtitle: "Includes:",
     items: [
