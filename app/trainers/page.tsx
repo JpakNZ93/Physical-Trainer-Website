@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { CoachPortrait } from "@/components/CoachPortrait";
+import { PlaceholderImage } from "@/components/PlaceholderImage";
 import { Check } from "lucide-react";
-import { coach, qualifications } from "@/lib/constants";
+import { coach, pageImages, qualifications } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Trainers",
@@ -10,18 +11,35 @@ export const metadata: Metadata = {
 
 export default function TrainersPage() {
   return (
-    <section className="py-16 md:py-24">
-      <div className="mx-auto max-w-7xl px-4 md:px-6">
-        <div className="grid items-start gap-12 lg:grid-cols-2">
-          <CoachPortrait />
+    <>
+      <section className="relative flex min-h-[32vh] items-end">
+        <div className="absolute inset-0">
+          <PlaceholderImage
+            label="Coach training"
+            src={pageImages.ctaBackground}
+            alt="Training session at 180PT"
+            aspectRatio="hero"
+            className="h-full w-full"
+          />
+          <div className="absolute inset-0 bg-black/70" />
+        </div>
 
-          <div>
-            <h1 className="text-3xl font-black uppercase tracking-wide text-white md:text-4xl">
-              Meet Your Coach
-            </h1>
-            <h2 className="mt-4 text-4xl font-black uppercase tracking-wide text-brand-yellow md:text-5xl">
-              {coach.name}
-            </h2>
+        <div className="relative z-10 mx-auto w-full max-w-7xl px-4 py-12 md:px-6 md:py-16">
+          <h1 className="text-3xl font-black uppercase tracking-wide text-white md:text-4xl">
+            Meet Your Coach
+          </h1>
+        </div>
+      </section>
+
+      <section className="py-16 md:py-24">
+        <div className="mx-auto max-w-7xl px-4 md:px-6">
+          <div className="grid items-start gap-12 lg:grid-cols-2">
+            <CoachPortrait />
+
+            <div>
+              <h2 className="text-4xl font-black uppercase tracking-wide text-brand-yellow md:text-5xl">
+                {coach.name}
+              </h2>
             <p className="mt-2 text-lg font-semibold uppercase tracking-wider text-white/80">
               {coach.title}
             </p>
@@ -52,9 +70,10 @@ export default function TrainersPage() {
                 ))}
               </ul>
             </div>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }

@@ -96,6 +96,7 @@ export default function ContactPage() {
         highlight="You"
         description="Start today and discover how 180PT can help you build a stronger body, stronger mind, and stronger life."
         buttonText="Book a Free Consultation"
+        backgroundImage={pageImages.ctaBackground}
       />
     </>
   );

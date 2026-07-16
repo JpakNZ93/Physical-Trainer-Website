@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Logo } from "@/components/Logo";
 import { PlaceholderImage } from "@/components/PlaceholderImage";
 import { Target } from "lucide-react";
 import { pageImages } from "@/lib/constants";
@@ -55,7 +54,7 @@ export default function AboutPage() {
             </div>
           </div>
 
-          <div className="relative flex items-center justify-center">
+          <div className="relative">
             <PlaceholderImage
               label="Weight Plates Background"
               src={pageImages.aboutHero}
@@ -63,9 +62,6 @@ export default function AboutPage() {
               aspectRatio="portrait"
               className="w-full"
             />
-            <div className="absolute inset-0 flex items-center justify-center">
-              <Logo size="lg" />
-            </div>
           </div>
         </div>
       </div>
