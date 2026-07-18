@@ -20,7 +20,6 @@ export const navLinks = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
   { label: "Services", href: "/services" },
-  { label: "Trainers", href: "/trainers" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -29,6 +28,33 @@ export const features = [
   { label: "Professional Coaching", icon: "dumbbell" as const },
   { label: "Real Accountability", icon: "users" as const },
   { label: "Proven Results", icon: "chart" as const },
+];
+
+export const aboutFeatures = [
+  { label: "Personalised Training", icon: "target" as const },
+  { label: "Real Results", icon: "chart" as const },
+  { label: "We Come To You", icon: "home" as const },
+  { label: "Ongoing Support", icon: "users" as const },
+  { label: "A Healthier, Happier You", icon: "flower" as const },
+];
+
+export const homeServices = [
+  {
+    title: "Personal Training",
+    description: "One-on-one coaching tailored to your goals.",
+  },
+  {
+    title: "Boxing Training",
+    description: "Build fitness, confidence, and technique.",
+  },
+  {
+    title: "Small Group Training",
+    description: "Train with friends — motivated and affordable.",
+  },
+  {
+    title: "Online Coaching",
+    description: "Custom programs and support from anywhere.",
+  },
 ];
 
 export const heroMedia = {
@@ -40,10 +66,31 @@ export const heroMedia = {
 export const pageImages = {
   aboutHero: "/images/hero_group_img.png",
   servicesHero: "/images/Hero3.jpg",
-  contactHero: "/images/group_img.jpeg",
+  contactHero: "/images/hero_group_img.png",
   homeMotivation: "/images/hero_group_img.png",
   ctaBackground: "/images/hero-frames/hero-frame-5.jpg",
 };
+
+export const trainingGallery = [
+  {
+    id: "boxing-session",
+    title: "Youth Confidence",
+    video: "/videos/Boy_Boxing.mp4",
+    poster: "/images/hero-frames/hero-frame-2.jpg",
+  },
+  {
+    id: "boxing-coaching",
+    title: "Boxing Coaching",
+    video: "/videos/Girl_Boxing.mp4",
+    poster: "/images/hero-frames/hero-frame-2.jpg",
+  },
+  {
+    id: "group-session",
+    title: "Small Group Session",
+    video: "/videos/Group_Fit.mp4",
+    poster: "/images/hero_group_img.png",
+  }
+];
 
 export const services = [
   {
@@ -79,7 +126,7 @@ export const services = [
   {
     title: "Small Group Training",
     icon: "users" as const,
-    image: "/images/group_img.jpeg",
+    image: "/images/hero_group_img.png",
     imageAlt: "Small group training at 180PT",
     description: "Train with friends while staying motivated together.",
     items: ["Affordable", "Fun", "High Energy", "Personal Coaching"],
@@ -104,23 +151,23 @@ export const services = [
 export const packages = [
   {
     id: "package-1",
-    title: "Package 1",
-    detail: "2 x 45 minute sessions per week",
+    title: "Twice Weekly",
+    detail: "2 × 45-minute personal training sessions per week",
   },
   {
     id: "package-2",
-    title: "Package 2",
-    detail: "3 x 45 minute sessions per week",
+    title: "Three Times Weekly",
+    detail: "3 × 45-minute personal training sessions per week",
   },
   {
     id: "small-group",
-    title: "Small Group Training",
-    detail: "per person — minimum 4 people",
+    title: "Small Group",
+    detail: "Per person — minimum 4 people, coached together",
   },
   {
     id: "online-coaching",
     title: "Online Coaching",
-    detail: "per session",
+    detail: "Custom program and weekly check-ins — train from anywhere",
   },
 ];
 

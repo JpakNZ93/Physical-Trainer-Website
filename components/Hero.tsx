@@ -7,7 +7,7 @@ interface HeroProps {
 
 export function Hero({ showCTAs = true }: HeroProps) {
   return (
-    <section className="relative min-h-[70vh] flex items-center">
+    <section className="relative flex min-h-[calc(100dvh-4.5rem)] items-center overflow-hidden">
       <div className="absolute inset-0">
         <HeroMedia />
         <div className="absolute inset-0 bg-black/70" />
@@ -18,7 +18,7 @@ export function Hero({ showCTAs = true }: HeroProps) {
           Turning <span className="text-brand-yellow not-italic">Lives</span> Around
         </h1>
         <p className="mt-4 text-lg font-semibold uppercase tracking-widest text-white/90 md:text-xl">
-          Private Personal Training
+          Mobile Personal Training · Western Sydney
         </p>
         <p className="mt-6 max-w-xl text-lg text-white/70">
           Helping everyday people become stronger, healthier, and more confident through
@@ -28,6 +28,9 @@ export function Hero({ showCTAs = true }: HeroProps) {
         {showCTAs && (
           <div className="mt-8 flex flex-col gap-4 sm:flex-row">
             <CTAButton href="/contact">Book a Free Consultation</CTAButton>
+            <CTAButton href="/services" variant="secondary">
+              View Services
+            </CTAButton>
           </div>
         )}
       </div>

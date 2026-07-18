@@ -10,6 +10,7 @@ interface ServiceCardProps {
   subtitle?: string;
   items: string[];
   footer?: string;
+  showImage?: boolean;
 }
 
 const iconMap = {
@@ -34,12 +35,13 @@ export function ServiceCard({
   subtitle,
   items,
   footer,
+  showImage = true,
 }: ServiceCardProps) {
   const Icon = iconMap[icon];
 
   return (
     <div className="flex flex-col overflow-hidden border border-white/10 bg-brand-grey">
-      {image && (
+      {showImage && image && (
         <div className="relative aspect-[4/3] w-full">
           <Image
             src={image}
@@ -64,11 +66,7 @@ export function ServiceCard({
         <ul className="flex flex-col gap-2">
           {items.map((item) => (
             <li key={item} className="flex items-start gap-2 text-sm text-white/70">
-              {icon === "users" && title === "Small Group Training" ? (
-                <Check className="mt-0.5 h-4 w-4 shrink-0 text-brand-yellow" />
-              ) : (
-                <span className="text-brand-yellow">•</span>
-              )}
+              <Check className="mt-0.5 h-4 w-4 shrink-0 text-brand-yellow" />
               {item}
             </li>
           ))}

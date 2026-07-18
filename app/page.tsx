@@ -1,8 +1,18 @@
+import Link from "next/link";
+import { Check } from "lucide-react";
 import { Hero } from "@/components/Hero";
 import { FeatureBar } from "@/components/FeatureBar";
 import { CTAStrip } from "@/components/CTAStrip";
+import { CTAButton } from "@/components/CTAButton";
+import { CoachPortrait } from "@/components/CoachPortrait";
 import { PlaceholderImage } from "@/components/PlaceholderImage";
-import { pageImages } from "@/lib/constants";
+import { coach, homeServices, pageImages } from "@/lib/constants";
+const trustPoints = [
+  "Mobile training — we come to you across Western Sydney",
+  "10+ years of coaching experience",
+  "Programs tailored to your goals, level, and lifestyle",
+  "Personal training, boxing, small group, and online coaching",
+];
 
 export default function HomePage() {
   return (
@@ -32,7 +42,80 @@ export default function HomePage() {
               aspectRatio="wide"
               className="w-full"
             />
-            <FeatureBar />
+            <ul className="flex flex-col gap-4">
+              {trustPoints.map((point) => (
+                <li key={point} className="flex items-start gap-3 text-white/70">
+                  <Check className="mt-0.5 h-5 w-5 shrink-0 text-brand-yellow" />
+                  {point}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-y border-white/10 bg-brand-grey py-16 md:py-20">
+        <div className="mx-auto max-w-7xl px-4 md:px-6">
+          <FeatureBar />
+        </div>
+      </section>
+
+      <section className="py-16 md:py-24">
+        <div className="mx-auto max-w-7xl px-4 md:px-6">
+          <h2 className="text-3xl font-black uppercase tracking-wide md:text-4xl">
+            Our <span className="text-brand-yellow">Services</span>
+          </h2>
+          <p className="mt-4 max-w-2xl text-white/70">
+            Professional coaching tailored to your goals — at your location, in a small group, or
+            online.
+          </p>
+
+          <div className="mt-12 grid gap-4 sm:grid-cols-2">
+            {homeServices.map((service) => (
+              <div
+                key={service.title}
+                className="border border-white/10 bg-brand-grey p-6"
+              >
+                <h3 className="text-lg font-bold uppercase tracking-wider text-brand-yellow">
+                  {service.title}
+                </h3>
+                <p className="mt-2 text-sm text-white/70">{service.description}</p>
+              </div>
+            ))}
+          </div>
+          <div className="mt-10 text-center">
+            <CTAButton href="/services" variant="secondary">
+              View All Services
+            </CTAButton>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-t border-white/10 bg-brand-grey py-16 md:py-24">
+        <div className="mx-auto max-w-7xl px-4 md:px-6">
+          <div className="grid items-center gap-12 lg:grid-cols-2">
+            <CoachPortrait />
+            <div>
+              <h2 className="text-3xl font-black uppercase tracking-wide md:text-4xl">
+                Meet <span className="text-brand-yellow">{coach.firstName}</span>
+              </h2>
+              <p className="mt-2 text-lg font-semibold uppercase tracking-wider text-white/80">
+                {coach.title}
+              </p>
+              <p className="mt-6 text-white/70">
+                With more than a decade of coaching experience, {coach.firstName} is passionate
+                about helping people completely transform their lives through fitness — building
+                confidence, discipline, and lasting results along the way.
+              </p>
+              <div className="mt-8">
+                <Link
+                  href="/about"
+                  className="text-sm font-bold uppercase tracking-wider text-brand-yellow transition-colors hover:text-yellow-300"
+                >
+                  Learn more about 180PT →
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </section>

@@ -23,7 +23,7 @@ export function Logo({ className = "", size = "sm" }: LogoProps) {
         className={`md:hidden ${sizeStyles[size]}`}
       />
       <Image
-        src="/Logo.png"
+        src="/Logo-mobile.png"
         alt="180PT"
         width={320}
         height={128}

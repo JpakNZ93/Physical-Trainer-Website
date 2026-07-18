@@ -1,17 +1,35 @@
-import { Target, Dumbbell, Users, BarChart3 } from "lucide-react";
-import { features } from "@/lib/constants";
+import { Target, Dumbbell, Users, BarChart3, HeartPulse, Home, Flower2 } from "lucide-react";
+import { features as defaultFeatures } from "@/lib/constants";
 
 const iconMap = {
   target: Target,
   dumbbell: Dumbbell,
   users: Users,
   chart: BarChart3,
+  heart: HeartPulse,
+  home: Home,
+  flower: Flower2,
 };
 
-export function FeatureBar() {
+interface FeatureItem {
+  label: string;
+  icon: keyof typeof iconMap;
+}
+
+interface FeatureBarProps {
+  items?: FeatureItem[];
+  columns?: 4 | 5;
+}
+
+export function FeatureBar({ items = defaultFeatures, columns = 4 }: FeatureBarProps) {
+  const gridClass =
+    columns === 5
+      ? "grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-5"
+      : "grid grid-cols-2 gap-6 md:grid-cols-4";
+
   return (
-    <div className="grid grid-cols-2 gap-6 md:grid-cols-4">
-      {features.map((feature) => {
+    <div className={gridClass}>
+      {items.map((feature) => {
         const Icon = iconMap[feature.icon];
         return (
           <div key={feature.label} className="flex flex-col items-center text-center">
