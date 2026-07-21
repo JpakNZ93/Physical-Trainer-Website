@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Suspense } from "react";
 import { Phone, Mail, Globe } from "lucide-react";
 import { ContactForm } from "@/components/ContactForm";
-import { CTAStrip } from "@/components/CTAStrip";
 import { PlaceholderImage } from "@/components/PlaceholderImage";
 import { openingHours, pageImages, siteConfig } from "@/lib/constants";
 
@@ -90,14 +89,6 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
-
-      <CTAStrip
-        headline="Your Only Limit Is You"
-        highlight="You"
-        description="Start today and discover how 180PT can help you build a stronger body, stronger mind, and stronger life."
-        buttonText="Book a Free Consultation"
-        backgroundImage={pageImages.ctaBackground}
-      />
     </>
   );
 }
