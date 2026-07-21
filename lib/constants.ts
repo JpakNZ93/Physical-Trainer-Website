@@ -12,7 +12,7 @@ export const coach = {
   name: "Johnson Huynh",
   firstName: "Johnson",
   title: "Founder | Personal Trainer | Boxing Coach",
-  image: "/images/coach/JohnsonCoach.jpg",
+  image: "/images/JohnsonCoach.jpg",
   imageAlt: "Johnson Huynh, founder and head coach at 180PT",
 };
 
@@ -64,10 +64,10 @@ export const heroMedia = {
 };
 
 export const pageImages = {
-  aboutHero: "/images/hero_group_img.png",
+  aboutHero: "/images/Group_Img.jpeg",
   servicesHero: "/images/Hero3.jpg",
-  contactHero: "/images/hero_group_img.png",
-  homeMotivation: "/images/hero_group_img.png",
+  contactHero: "/images/Group_Img.jpeg",
+  homeMotivation: "/images/Group_Img.jpeg",
   ctaBackground: "/images/hero-frames/hero-frame-5.jpg",
 };
 
@@ -120,7 +120,7 @@ export const services = [
   {
     title: "Small Group Training",
     icon: "users" as const,
-    image: "/images/hero_group_img.png",
+    image: "/images/Group_Img.jpeg",
     imageAlt: "Small group training at 180PT",
     description: "Train with friends while staying motivated together.",
     items: ["Affordable", "Fun", "High Energy", "Personal Coaching"],
