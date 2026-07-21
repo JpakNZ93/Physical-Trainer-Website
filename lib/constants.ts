@@ -73,23 +73,17 @@ export const pageImages = {
 
 export const trainingGallery = [
   {
-    id: "boxing-session",
-    title: "Youth Confidence",
+    id: "home-garage",
+    title: "Home Garage",
     video: "/videos/Boy_Boxing.mp4",
     poster: "/images/hero-frames/hero-frame-2.jpg",
   },
   {
-    id: "boxing-coaching",
-    title: "Boxing Coaching",
+    id: "local-park",
+    title: "Local Park",
     video: "/videos/Girl_Boxing.mp4",
     poster: "/images/hero-frames/hero-frame-2.jpg",
   },
-  {
-    id: "group-session",
-    title: "Small Group Session",
-    video: "/videos/Group_Fit.mp4",
-    poster: "/images/hero_group_img.png",
-  }
 ];
 
 export const services = [
