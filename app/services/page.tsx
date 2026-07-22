@@ -83,11 +83,14 @@ export default function ServicesPage() {
       <section className="border-t border-white/10 bg-brand-grey bg-diagonal-lines py-16 md:py-20">
         <div className="mx-auto max-w-7xl px-4 md:px-6">
           <h2 className="text-center text-3xl font-black uppercase tracking-wide md:text-4xl">
-            {servicesPage.packagesHeading}
+            {servicesPage.packagesHeading}{" "}
+            <span className="text-brand-yellow">— {servicesPage.packagesTagline}</span>
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-center text-white/70">
-            {servicesPage.packagesIntro}
-          </p>
+          {servicesPage.packagesIntro ? (
+            <p className="mx-auto mt-4 max-w-2xl text-center text-white/70">
+              {servicesPage.packagesIntro}
+            </p>
+          ) : null}
 
           <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {packages.map((pkg) => (

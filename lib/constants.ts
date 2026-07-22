@@ -99,9 +99,9 @@ export const servicesPage = {
     },
   ],
   programsHeading: "Find Your Program",
-  packagesHeading: "Choose Your Package",
-  packagesIntro:
-    "All personal training sessions are 45 minutes. Select a starting point — we'll tailor the details in your free consultation.",
+  packagesHeading: "Training Options",
+  packagesTagline: "No Lock in Contracts",
+  packagesIntro: "",
   galleryHeading: "Real Sessions",
   galleryIntro: "Outdoor and at-home training across Western Sydney.",
 };
@@ -239,24 +239,27 @@ export const services = [
 
 export const packages = [
   {
-    id: "package-1",
-    title: "Twice Weekly",
-    detail: "2 × 45-minute personal training sessions per week",
+    id: "pay-as-you-go",
+    title: "Pay As You Go",
+    detail: "Flexible sessions to suit your schedule.",
   },
   {
-    id: "package-2",
-    title: "Three Times Weekly",
-    detail: "3 × 45-minute personal training sessions per week",
+    id: "7-week-transformation",
+    title: "7-Week Transformation Program",
+    detail:
+      "A complete fitness and accountability program designed to deliver real results.",
   },
   {
     id: "small-group",
-    title: "Small Group",
-    detail: "Per person — minimum 4 people, coached together",
+    title: "Small Group Training",
+    detail:
+      "Train with friends, family or colleagues in a fun and motivating environment.",
   },
   {
     id: "online-coaching",
     title: "Online Coaching",
-    detail: "Custom program and weekly check-ins — train from anywhere",
+    detail:
+      "Custom training plans, nutrition guidance and ongoing support—wherever you are.",
   },
 ];
 
