@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { CoachPortrait } from "@/components/CoachPortrait";
 import { CTAStrip } from "@/components/CTAStrip";
 import { FeatureBar } from "@/components/FeatureBar";
+import { PlaceholderImage } from "@/components/PlaceholderImage";
 import { Check, Target } from "lucide-react";
 import { aboutFeatures, coach, pageImages, qualifications } from "@/lib/constants";
 
@@ -16,7 +17,7 @@ export default function AboutPage() {
     <>
       <section className="py-16 md:py-24">
         <div className="mx-auto max-w-7xl px-4 md:px-6">
-          <div className="grid items-start gap-12 lg:grid-cols-2">
+          <div className="grid items-center gap-12 lg:grid-cols-2">
             <div>
               <h1 className="text-4xl font-black uppercase tracking-wide text-brand-yellow md:text-5xl">
                 About Us
@@ -31,12 +32,7 @@ export default function AboutPage() {
                 a mobile personal training service dedicated to helping everyday people become
                 stronger, healthier, and more confident — body, mind and life.
               </p>
-
-              <div className="my-8 lg:hidden">
-                <CoachPortrait />
-              </div>
-
-              <p className="text-white/70">
+              <p className="mt-4 text-white/70">
                 Based in Western Sydney, we bring training to you — at home, in a local park, or
                 wherever you train best. No gym membership required.
               </p>
@@ -60,49 +56,56 @@ export default function AboutPage() {
               </div>
             </div>
 
-            <div className="hidden lg:sticky lg:top-24 lg:block">
-              <CoachPortrait />
-            </div>
+            <PlaceholderImage
+              label="Training at 180PT"
+              src={pageImages.aboutHero}
+              alt="Group training session at 180PT"
+              aspectRatio="portrait"
+              className="w-full"
+            />
           </div>
         </div>
       </section>
 
       <section className="border-t border-white/10 bg-brand-grey py-16 md:py-24">
         <div className="mx-auto max-w-7xl px-4 md:px-6">
-          <h2 className="text-3xl font-black uppercase tracking-wide text-white md:text-4xl">
-            Meet <span className="text-brand-yellow">{coach.firstName}</span>
-          </h2>
-          <p className="mt-2 text-lg font-semibold uppercase tracking-wider text-white/80">
-            {coach.title}
-          </p>
+          <div className="grid items-start gap-12 lg:grid-cols-2">
+            <CoachPortrait />
+            <div>
+              <h2 className="text-3xl font-black uppercase tracking-wide text-white md:text-4xl">
+                Meet <span className="text-brand-yellow">{coach.firstName}</span>
+              </h2>
+              <p className="mt-2 text-lg font-semibold uppercase tracking-wider text-white/80">
+                {coach.title}
+              </p>
 
-          <div className="mt-10 grid items-start gap-12 lg:grid-cols-2">
-            <div className="space-y-4">
-              <p className="text-white/70">
-                {coach.firstName} founded 180PT to combine one-on-one personal training with boxing
-                coaching — helping clients lose weight, build strength, and grow real confidence
-                through structured programs and weekly accountability.
-              </p>
-              <p className="text-white/70">
-                Known for a direct but supportive approach, {coach.firstName} builds plans around
-                each client&apos;s schedule, ability, and goals — from first-time trainers to
-                clients pushing their next boxing and conditioning milestone.
-              </p>
+              <div className="mt-6 space-y-4">
+                <p className="text-white/70">
+                  {coach.firstName} founded 180PT to combine one-on-one personal training with boxing
+                  coaching — helping clients lose weight, build strength, and grow real confidence
+                  through structured programs and weekly accountability.
+                </p>
+                <p className="text-white/70">
+                  Known for a direct but supportive approach, {coach.firstName} builds plans around
+                  each client&apos;s schedule, ability, and goals — from first-time trainers to
+                  clients pushing their next boxing and conditioning milestone.
+                </p>
+              </div>
+
+              <aside className="mt-8 border border-brand-yellow/30 bg-brand-black/40 p-6">
+                <h3 className="text-lg font-bold uppercase tracking-wider text-brand-yellow">
+                  Qualifications
+                </h3>
+                <ul className="mt-4 flex flex-col gap-3">
+                  {qualifications.map((qual) => (
+                    <li key={qual} className="flex items-start gap-3 text-white/70">
+                      <Check className="mt-0.5 h-5 w-5 shrink-0 text-brand-yellow" />
+                      <span>{qual}</span>
+                    </li>
+                  ))}
+                </ul>
+              </aside>
             </div>
-
-            <aside className="border border-brand-yellow/30 bg-brand-black/40 p-6">
-              <h3 className="text-lg font-bold uppercase tracking-wider text-brand-yellow">
-                Qualifications
-              </h3>
-              <ul className="mt-4 flex flex-col gap-3">
-                {qualifications.map((qual) => (
-                  <li key={qual} className="flex items-start gap-3 text-white/70">
-                    <Check className="mt-0.5 h-5 w-5 shrink-0 text-brand-yellow" />
-                    <span>{qual}</span>
-                  </li>
-                ))}
-              </ul>
-            </aside>
           </div>
         </div>
       </section>
