@@ -60,7 +60,7 @@ export const homeServices = [
 export const heroMedia = {
   video: "/videos/Park_Boxing.mp4",
   poster: "/images/hero-frames/hero-frame-4.jpg",
-  mobilePoster: "/images/hero-mobile.jpg",
+  mobilePoster: "/images/Hero3.jpg",
 };
 
 export const pageImages = {
