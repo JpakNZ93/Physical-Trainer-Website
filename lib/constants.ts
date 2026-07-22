@@ -154,12 +154,39 @@ export const trainingGallery = [
   },
 ];
 
+export const serviceImages = {
+  personalTraining: {
+    src: "/images/services/personal-training.jpg",
+    alt: "Personal trainer assisting a client during an outdoor session in a park",
+    credit: "Unsplash — instructor assisting woman in park (G0PCYx3mI-Q)",
+    url: "https://unsplash.com/photos/instructor-assisting-woman-with-yoga-pose-in-park-G0PCYx3mI-Q",
+  },
+  boxing: {
+    src: "/images/services/boxing-training.jpg",
+    alt: "Boxing training outdoors with gloves in a forest setting",
+    credit: "Unsplash — woman boxing outdoors (1Ild8FHfOMI)",
+    url: "https://unsplash.com/photos/a-woman-wearing-boxing-gloves-and-shorts-outdoors-1Ild8FHfOMI",
+  },
+  smallGroup: {
+    src: "/images/services/small-group-training.jpg",
+    alt: "Group exercising together outdoors on a sunny day",
+    credit: "Unsplash — people exercising outdoors (7mS5qa7VFYk)",
+    url: "https://unsplash.com/photos/people-exercising-outdoors-on-a-sunny-day-7mS5qa7VFYk",
+  },
+  onlineCoaching: {
+    src: "/images/services/online-coaching.jpg",
+    alt: "Client following an online workout on a laptop at home",
+    credit: "Unsplash — woman stretching watching laptop (02_PUCjs7pw)",
+    url: "https://unsplash.com/photos/woman-stretching-on-yoga-mat-watching-laptop-02_PUCjs7pw",
+  },
+};
+
 export const services = [
   {
     title: "Personal Training",
     icon: "user" as const,
-    image: "/images/hero-frames/hero-frame-1.jpg",
-    imageAlt: "One-on-one personal training at 180PT",
+    image: serviceImages.personalTraining.src,
+    imageAlt: serviceImages.personalTraining.alt,
     description: "One-on-one coaching built around your goals — weight loss, strength, fitness, or getting back into training.",
     subtitle: "Perfect for:",
     items: [
@@ -173,8 +200,8 @@ export const services = [
   {
     title: "Boxing Training",
     icon: "boxing" as const,
-    image: "/images/hero-frames/hero-frame-2.jpg",
-    imageAlt: "Boxing training session at 180PT",
+    image: serviceImages.boxing.src,
+    imageAlt: serviceImages.boxing.alt,
     description: "High-energy pad work and conditioning — build cardio, coordination, and confidence at any level.",
     items: [
       "Fitness",
@@ -188,8 +215,8 @@ export const services = [
   {
     title: "Small Group Training",
     icon: "users" as const,
-    image: "/images/Group_Img.jpeg",
-    imageAlt: "Small group training at 180PT",
+    image: serviceImages.smallGroup.src,
+    imageAlt: serviceImages.smallGroup.alt,
     description: "Train with friends and split the cost — high energy, personal coaching, minimum 3–4 people.",
     items: ["Affordable", "Fun", "High Energy", "Personal Coaching"],
     footer: "Minimum 3–4 people.",
@@ -197,8 +224,8 @@ export const services = [
   {
     title: "Online Coaching",
     icon: "laptop" as const,
-    image: "/images/hero-frames/hero-frame-3.jpg",
-    imageAlt: "Online coaching support from 180PT",
+    image: serviceImages.onlineCoaching.src,
+    imageAlt: serviceImages.onlineCoaching.alt,
     description: "Custom programming and weekly check-ins when you need flexibility between face-to-face sessions.",
     subtitle: "Includes:",
     items: [
