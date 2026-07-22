@@ -81,6 +81,31 @@ export const mobileTrainingCase = {
     "You don't need a gym to get fit. You need a coach who shows up, keeps you accountable, and builds a program around your life — not the other way around.",
 };
 
+export const servicesPage = {
+  intro:
+    "Pick the program that fits your goals, book a free consultation, and start training at your location across Western Sydney.",
+  steps: [
+    {
+      title: "Choose a program",
+      description: "Personal training, boxing, small group, or online — find what suits your goals and lifestyle.",
+    },
+    {
+      title: "Book a free consult",
+      description: "Tell us where you're based and what you want to achieve. No pressure, no obligation.",
+    },
+    {
+      title: "Start at your location",
+      description: "We come to your park, home, or garage — sessions are 45 minutes and booked around your schedule.",
+    },
+  ],
+  programsHeading: "Find Your Program",
+  packagesHeading: "Choose Your Package",
+  packagesIntro:
+    "All personal training sessions are 45 minutes. Select a starting point — we'll tailor the details in your free consultation.",
+  galleryHeading: "Real Sessions",
+  galleryIntro: "Outdoor and at-home training across Western Sydney.",
+};
+
 export const homeServices = [
   {
     title: "Personal Training",
@@ -135,7 +160,7 @@ export const services = [
     icon: "user" as const,
     image: "/images/hero-frames/hero-frame-1.jpg",
     imageAlt: "One-on-one personal training at 180PT",
-    description: "One-on-one coaching at your home, local park, or garage — tailored to your goals without setting foot in a gym.",
+    description: "One-on-one coaching built around your goals — weight loss, strength, fitness, or getting back into training.",
     subtitle: "Perfect for:",
     items: [
       "Weight Loss",
@@ -150,7 +175,7 @@ export const services = [
     icon: "boxing" as const,
     image: "/images/hero-frames/hero-frame-2.jpg",
     imageAlt: "Boxing training session at 180PT",
-    description: "High-energy boxing sessions outdoors or at your location — build fitness and confidence in the fresh air.",
+    description: "High-energy pad work and conditioning — build cardio, coordination, and confidence at any level.",
     items: [
       "Fitness",
       "Coordination",
@@ -165,7 +190,7 @@ export const services = [
     icon: "users" as const,
     image: "/images/Group_Img.jpeg",
     imageAlt: "Small group training at 180PT",
-    description: "Train with friends at a park or home setup — motivated, affordable, and free from gym crowds.",
+    description: "Train with friends and split the cost — high energy, personal coaching, minimum 3–4 people.",
     items: ["Affordable", "Fun", "High Energy", "Personal Coaching"],
     footer: "Minimum 3–4 people.",
   },
@@ -174,7 +199,7 @@ export const services = [
     icon: "laptop" as const,
     image: "/images/hero-frames/hero-frame-3.jpg",
     imageAlt: "Online coaching support from 180PT",
-    description: "Train anywhere with personalised programs and ongoing support.",
+    description: "Custom programming and weekly check-ins when you need flexibility between face-to-face sessions.",
     subtitle: "Includes:",
     items: [
       "Custom Training Program",

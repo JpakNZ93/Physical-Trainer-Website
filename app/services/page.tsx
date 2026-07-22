@@ -1,73 +1,95 @@
 import type { Metadata } from "next";
-import { MapPin } from "lucide-react";
 import { ServiceCard } from "@/components/ServiceCard";
 import { PackageCard } from "@/components/PackageCard";
 import { CTAStrip } from "@/components/CTAStrip";
-import { MobileTrainingCase } from "@/components/MobileTrainingCase";
+import { CTAButton } from "@/components/CTAButton";
 import { TrainingGallery } from "@/components/TrainingGallery";
-import { packages, pageImages, services, trainingGallery } from "@/lib/constants";
+import { packages, pageImages, services, servicesPage, trainingGallery } from "@/lib/constants";
+
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "Mobile personal training, outdoor boxing, and small group sessions across Western Sydney. No gym required — we come to your park, home, or garage.",
+    "Personal training, boxing, small group, and online coaching across Western Sydney. Choose your program and book a free consultation.",
 };
 
 export default function ServicesPage() {
   return (
     <>
-      <section className="py-16 md:py-24">
+      <section className="py-16 md:py-20">
         <div className="mx-auto max-w-7xl px-4 md:px-6">
           <h1 className="text-4xl font-black uppercase tracking-wide md:text-5xl">
-            Our <span className="text-brand-yellow">Services</span>
+            Services & <span className="text-brand-yellow">Packages</span>
           </h1>
-          <p className="mt-4 max-w-3xl text-lg text-white/70">
-            Professional coaching at your location across Western Sydney — your local park, home,
-            or garage. No gym membership, no commute, no crowds. Just focused training that fits your
-            life.
-          </p>
-          <p className="mt-4 flex items-start gap-2 text-sm text-white/60">
-            <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-brand-yellow" />
-            Mobile training — we come to you. Sessions available early mornings, evenings, and
-            weekends.
-          </p>
+          <p className="mt-4 max-w-2xl text-lg text-white/70">{servicesPage.intro}</p>
 
-          <div className="mt-12 grid gap-6 sm:grid-cols-2">
-            {services.map((service) => (
-              <ServiceCard key={service.title} {...service} showImage={false} />
+          <ol className="mt-10 grid gap-6 md:grid-cols-3">
+            {servicesPage.steps.map((step, index) => (
+              <li
+                key={step.title}
+                className="border border-white/10 bg-brand-grey p-6"
+              >
+                <span className="text-sm font-bold uppercase tracking-widest text-brand-yellow">
+                  Step {index + 1}
+                </span>
+                <h2 className="mt-2 text-lg font-bold uppercase tracking-wide text-white">
+                  {step.title}
+                </h2>
+                <p className="mt-3 text-sm leading-relaxed text-white/70">{step.description}</p>
+              </li>
             ))}
+          </ol>
+        </div>
+      </section>
+
+      <section className="border-t border-white/10 bg-brand-grey py-16 md:py-20">
+        <div className="mx-auto max-w-7xl px-4 md:px-6">
+          <h2 className="text-3xl font-black uppercase tracking-wide md:text-4xl">
+            {servicesPage.programsHeading}
+          </h2>
+
+          <div className="mt-10 grid gap-6 sm:grid-cols-2">
+            {services.map((service) => (
+              <ServiceCard key={service.title} {...service} />
+            ))}
+          </div>
+
+          <div className="mt-12 flex flex-col items-center gap-3 text-center">
+            <p className="max-w-xl text-white/70">
+              Not sure which program is right for you? We&apos;ll help you choose in a free
+              consultation.
+            </p>
+            <CTAButton href="/contact">Book a Free Consultation</CTAButton>
           </div>
         </div>
       </section>
 
-      <MobileTrainingCase />
-
-      <section className="border-t border-white/10 bg-brand-grey py-16 md:py-24">
+      <section className="border-t border-white/10 py-16 md:py-20">
         <div className="mx-auto max-w-7xl px-4 md:px-6">
-          <h2 className="text-3xl font-black uppercase tracking-wide md:text-4xl">
-            Training in <span className="text-brand-yellow">Action</span>
-          </h2>
-          <p className="mt-4 max-w-2xl text-white/70">
-            Real outdoor and at-home sessions across Western Sydney — personal training, boxing, and
-            small group coaching without stepping inside a gym.
-          </p>
+          <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+            <div>
+              <h2 className="text-3xl font-black uppercase tracking-wide md:text-4xl">
+                {servicesPage.galleryHeading}
+              </h2>
+              <p className="mt-2 text-white/70">{servicesPage.galleryIntro}</p>
+            </div>
+          </div>
 
-          <div className="mt-12">
+          <div className="mt-10">
             <TrainingGallery items={trainingGallery} />
           </div>
         </div>
       </section>
 
-      <section className="border-t border-white/10 bg-brand-grey bg-diagonal-lines py-16 md:py-24">
+      <section className="border-t border-white/10 bg-brand-grey bg-diagonal-lines py-16 md:py-20">
         <div className="mx-auto max-w-7xl px-4 md:px-6">
-          <h2 className="text-3xl font-black uppercase tracking-wide md:text-4xl">
-            Training <span className="text-brand-yellow">Packages</span>
+          <h2 className="text-center text-3xl font-black uppercase tracking-wide md:text-4xl">
+            {servicesPage.packagesHeading}
           </h2>
-          <p className="mt-4 max-w-2xl text-white/70 md:mx-auto md:text-center">
-            Choose a package that fits your schedule and goals. All personal training sessions are
-            45 minutes and booked at a time that works for you.
+          <p className="mx-auto mt-4 max-w-2xl text-center text-white/70">
+            {servicesPage.packagesIntro}
           </p>
 
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {packages.map((pkg) => (
               <PackageCard key={pkg.id} {...pkg} />
             ))}
@@ -76,9 +98,9 @@ export default function ServicesPage() {
       </section>
 
       <CTAStrip
-        headline="Ready to Get Started?"
-        highlight="Get Started"
-        description="Book a free consultation and we'll find the right program — at your park, home, or garage."
+        headline="Let's Find the Right Fit"
+        highlight="Right Fit"
+        description="Book your free consultation today — we'll confirm your program, location, and schedule."
         buttonText="Book a Free Consultation"
         backgroundImage={pageImages.ctaBackground}
       />
