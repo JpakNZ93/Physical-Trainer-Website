@@ -9,7 +9,7 @@ import { aboutFeatures, coach, pageImages, qualifications } from "@/lib/constant
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Learn about 180PT and meet Johnson Huynh — founder, personal trainer, and boxing coach helping people turn their lives around in Western Sydney.",
+    "180PT is mobile personal training for Western Sydney locals who are done with gym commutes. Train outdoors or at home with expert coaching that comes to you.",
 };
 
 export default function AboutPage() {
@@ -29,12 +29,14 @@ export default function AboutPage() {
               <p className="mt-6 text-white/70">
                 At 180PT, we believe fitness is more than just exercise — it&apos;s about{" "}
                 <span className="font-semibold text-brand-yellow">turning lives around</span>. We are
-                a mobile personal training service dedicated to helping everyday people become
-                stronger, healthier, and more confident — body, mind and life.
+                a mobile personal training service for people who want real results without the gym
+                — those who&apos;d rather train in the fresh air, close to home, on a schedule that
+                actually works.
               </p>
               <p className="mt-4 text-white/70">
-                Based in Western Sydney, we bring training to you — at home, in a local park, or
-                wherever you train best. No gym membership required.
+                Based in Western Sydney, we bring training to you — at home, in a local park, or in
+                your garage. No gym membership, no peak-hour traffic, and no waiting around for
+                equipment. Just focused, one-on-one coaching where you&apos;re most comfortable.
               </p>
               <p className="mt-4 text-white/70">
                 At 180PT, you&apos;re never just another client. Every program is designed
@@ -50,8 +52,8 @@ export default function AboutPage() {
                   </h3>
                 </div>
                 <p className="text-white/70">
-                  To inspire, equip and support people to reach their full potential through
-                  personalised fitness, accountability and care.
+                  To make professional fitness accessible to everyday people — wherever they are, on
+                  their terms — through personalised coaching, accountability, and care.
                 </p>
               </div>
             </div>
@@ -81,9 +83,11 @@ export default function AboutPage() {
 
               <div className="mt-6 space-y-4">
                 <p className="text-white/70">
-                  {coach.firstName} founded 180PT to combine one-on-one personal training with boxing
-                  coaching — helping clients lose weight, build strength, and grow real confidence
-                  through structured programs and weekly accountability.
+                  {coach.firstName} founded 180PT for clients who were fed up with gym commutes and
+                  crowded training floors. He combines one-on-one personal training with boxing
+                  coaching — helping people lose weight, build strength, and grow real confidence
+                  through structured programs, weekly accountability, and sessions that fit real
+                  life.
                 </p>
                 <p className="text-white/70">
                   Known for a direct but supportive approach, {coach.firstName} builds plans around
@@ -122,7 +126,7 @@ export default function AboutPage() {
       <CTAStrip
         headline="Your Fitness Journey Starts Here"
         highlight="Starts Here"
-        description="Take the first step toward a stronger body, stronger mind, and stronger life with 180PT."
+        description="Ready to train without the gym? Book a free consultation — we'll come to you across Western Sydney."
         buttonText="Book a Free Consultation"
         backgroundImage={pageImages.ctaBackground}
       />

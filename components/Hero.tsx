@@ -21,8 +21,8 @@ export function Hero({ showCTAs = true }: HeroProps) {
           Mobile Personal Training · Western Sydney
         </p>
         <p className="mt-6 max-w-xl text-lg text-white/70">
-          Helping everyday people become stronger, healthier, and more confident through
-          professional coaching and real accountability.
+          Mobile personal training across Western Sydney — train outdoors or at home with no gym
+          commute, no crowds, and no membership required.
         </p>
 
         {showCTAs && (

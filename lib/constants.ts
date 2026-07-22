@@ -1,7 +1,7 @@
 export const siteConfig = {
   name: "180PT",
   description:
-    "Private personal training in Western Sydney. Helping everyday people become stronger, healthier, and more confident.",
+    "Mobile personal training across Western Sydney. Train outdoors or at home — no gym commute, no membership, no crowds. Expert coaching that comes to you.",
   url: "https://www.180pt.com.au",
   email: "hello@180pt.com.au",
   phone: "0450 122 665",
@@ -24,19 +24,62 @@ export const navLinks = [
 ];
 
 export const features = [
-  { label: "Personalised Programs", icon: "target" as const },
-  { label: "Professional Coaching", icon: "dumbbell" as const },
-  { label: "Real Accountability", icon: "users" as const },
+  { label: "Train Outdoors", icon: "target" as const },
+  { label: "We Come To You", icon: "home" as const },
+  { label: "No Gym Membership", icon: "dumbbell" as const },
   { label: "Proven Results", icon: "chart" as const },
 ];
 
 export const aboutFeatures = [
-  { label: "Personalised Training", icon: "target" as const },
+  { label: "Outdoor Training", icon: "target" as const },
   { label: "Real Results", icon: "chart" as const },
   { label: "We Come To You", icon: "home" as const },
-  { label: "Ongoing Support", icon: "users" as const },
+  { label: "Flexible Scheduling", icon: "users" as const },
   { label: "A Healthier, Happier You", icon: "flower" as const },
 ];
+
+export const trustPoints = [
+  "Train at your local park, backyard, or home garage — fresh air, no crowded gym floor",
+  "We travel to you across Western Sydney — no commute, no parking, no wasted time",
+  "No gym membership or lock-in contracts — just focused coaching on your schedule",
+  "10+ years of experience helping everyday people build strength, confidence, and lasting habits",
+];
+
+export const mobileTrainingCase = {
+  eyebrow: "No Gym Required",
+  headline: "Built for People Who'd Rather Train",
+  highlight: "Outside the Gym",
+  intro:
+    "If you're tired of fighting for equipment, sitting in traffic, and paying for a membership you barely use — you're not alone. 180PT was built for people who want real results without the gym hassle. We bring professional coaching to the places you already love: your local park, your backyard, or your home.",
+  points: [
+    {
+      icon: "trees" as const,
+      title: "Fresh Air, Real Results",
+      description:
+        "Train outdoors in natural light and open space. No stuffy rooms, no queues, no feeling watched on a crowded gym floor.",
+    },
+    {
+      icon: "home" as const,
+      title: "We Come To You",
+      description:
+        "Your coach travels to your location across Western Sydney. Save the commute, train before work, or fit a session in while the kids are home.",
+    },
+    {
+      icon: "clock" as const,
+      title: "Your Time, Your Schedule",
+      description:
+        "Sessions booked around your life — early mornings, evenings, and weekends. No rushing to beat peak-hour gym crowds.",
+    },
+    {
+      icon: "map" as const,
+      title: "Train Where You're Comfortable",
+      description:
+        "Local parks, home garages, backyards — wherever suits you. Private, focused coaching without the intimidation of a commercial gym.",
+    },
+  ],
+  closer:
+    "You don't need a gym to get fit. You need a coach who shows up, keeps you accountable, and builds a program around your life — not the other way around.",
+};
 
 export const homeServices = [
   {
@@ -92,7 +135,7 @@ export const services = [
     icon: "user" as const,
     image: "/images/hero-frames/hero-frame-1.jpg",
     imageAlt: "One-on-one personal training at 180PT",
-    description: "One-on-one coaching tailored specifically to your goals.",
+    description: "One-on-one coaching at your home, local park, or garage — tailored to your goals without setting foot in a gym.",
     subtitle: "Perfect for:",
     items: [
       "Weight Loss",
@@ -107,7 +150,7 @@ export const services = [
     icon: "boxing" as const,
     image: "/images/hero-frames/hero-frame-2.jpg",
     imageAlt: "Boxing training session at 180PT",
-    description: "Improve your:",
+    description: "High-energy boxing sessions outdoors or at your location — build fitness and confidence in the fresh air.",
     items: [
       "Fitness",
       "Coordination",
@@ -122,7 +165,7 @@ export const services = [
     icon: "users" as const,
     image: "/images/Group_Img.jpeg",
     imageAlt: "Small group training at 180PT",
-    description: "Train with friends while staying motivated together.",
+    description: "Train with friends at a park or home setup — motivated, affordable, and free from gym crowds.",
     items: ["Affordable", "Fun", "High Energy", "Personal Coaching"],
     footer: "Minimum 3–4 people.",
   },

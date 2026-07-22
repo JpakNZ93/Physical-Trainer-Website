@@ -4,19 +4,16 @@ import { Hero } from "@/components/Hero";
 import { FeatureBar } from "@/components/FeatureBar";
 import { CTAStrip } from "@/components/CTAStrip";
 import { CoachPortrait } from "@/components/CoachPortrait";
+import { MobileTrainingCase } from "@/components/MobileTrainingCase";
 import { PlaceholderImage } from "@/components/PlaceholderImage";
-import { coach, pageImages } from "@/lib/constants";
-const trustPoints = [
-  "Mobile training — we come to you across Western Sydney",
-  "10+ years of coaching experience",
-  "Programs tailored to your goals, level, and lifestyle",
-  "Personal training, boxing, small group, and online coaching",
-];
+import { coach, pageImages, trustPoints } from "@/lib/constants";
 
 export default function HomePage() {
   return (
     <>
       <Hero />
+
+      <MobileTrainingCase />
 
       <section className="py-16 md:py-24">
         <div className="mx-auto max-w-7xl px-4 md:px-6">
@@ -24,13 +21,14 @@ export default function HomePage() {
             Why Choose <span className="text-brand-yellow">180PT</span>?
           </h2>
           <p className="mt-6 max-w-3xl text-lg text-white/70">
-            At 180PT, we believe fitness is about more than just physical transformation—it&apos;s
-            about changing lives.
+            Most people don&apos;t quit fitness because they&apos;re lazy — they quit because the gym
+            doesn&apos;t fit their life. Long commutes, crowded floors, and memberships that go unused
+            make it harder to stay consistent.
           </p>
           <p className="mt-4 max-w-3xl text-white/70">
-            Whether you&apos;re looking to lose weight, build muscle, improve your health, or gain
-            confidence, we&apos;re committed to helping you reach your goals with structured
-            training, expert coaching, and ongoing support.
+            180PT removes those barriers. We bring expert coaching to your doorstep, your local park,
+            or wherever you feel most comfortable — so you can focus on getting stronger, not fighting
+            for a treadmill.
           </p>
 
           <div className="mt-12 grid items-center gap-12 lg:grid-cols-2">
@@ -89,9 +87,9 @@ export default function HomePage() {
       </section>
 
       <CTAStrip
-        headline="Your Only Limit Is You"
-        highlight="You"
-        description="Start today and discover how 180PT can help you build a stronger body, stronger mind, and stronger life."
+        headline="Skip the Gym. Start Training."
+        highlight="Start Training"
+        description="Book a free consultation and train outdoors or at home — on your schedule, with a coach who comes to you."
         buttonText="Book a Free Consultation"
         backgroundImage={pageImages.ctaBackground}
       />

@@ -8,7 +8,7 @@ import { openingHours, pageImages, siteConfig } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Get in touch with 180PT in Western Sydney. Book your free consultation today.",
+    "Book a free consultation with 180PT. Mobile personal training across Western Sydney — we come to your park, home, or garage.",
 };
 
 export default function ContactPage() {
@@ -31,8 +31,9 @@ export default function ContactPage() {
             Contact Us
           </h1>
           <h2 className="mt-2 text-2xl font-bold uppercase tracking-wide">Let&apos;s Get Started</h2>
-          <p className="mt-4 text-white/70">
-            Ready to begin your fitness journey? Book your first session today.
+          <p className="mt-4 max-w-2xl text-white/70">
+            Ready to train without the gym commute? Tell us where you&apos;re based in Western
+            Sydney and we&apos;ll book your first session at a time and place that suits you.
           </p>
 
           <div className="mt-12 grid gap-12 lg:grid-cols-2">
