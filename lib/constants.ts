@@ -157,27 +157,27 @@ export const trainingGallery = [
 export const serviceImages = {
   personalTraining: {
     src: "/images/services/personal-training.jpg",
-    alt: "Personal trainer supervising a client during a weighted lunge exercise",
-    credit: "Unsplash — woman lunging with trainer supervises (JM4d2HPo4w4)",
-    url: "https://unsplash.com/photos/woman-lunging-with-weight-while-trainer-supervises-JM4d2HPo4w4",
+    alt: "Personal trainer coaching a client through exercises in the gym",
+    credit: "Unsplash — two people exercising in gym (buWcS7G1_28)",
+    url: "https://unsplash.com/photos/two-person-inside-gym-exercising-buWcS7G1_28",
   },
   boxing: {
     src: "/images/services/boxing-training.jpg",
-    alt: "Boxer training with focus mitts during a pad work session",
-    credit: "Unsplash — boxer training with pads (AknKXOJOsoA)",
-    url: "https://unsplash.com/photos/boxer-training-with-pads-in-a-gym-AknKXOJOsoA",
+    alt: "Two boxers sparring during a training session in a boxing gym",
+    credit: "Unsplash — two men sparring in boxing gym (FH6JcaCrYJ0)",
+    url: "https://unsplash.com/photos/two-men-sparring-inside-boxing-gym-FH6JcaCrYJ0",
   },
   smallGroup: {
     src: "/images/services/small-group-training.jpg",
-    alt: "Group exercising together outdoors on a sunny day",
-    credit: "Unsplash — people exercising outdoors (7mS5qa7VFYk)",
-    url: "https://unsplash.com/photos/people-exercising-outdoors-on-a-sunny-day-7mS5qa7VFYk",
+    alt: "Group of people running together during an outdoor training session",
+    credit: "Unsplash — group running on dirt road (LyORqx-3O-c)",
+    url: "https://unsplash.com/photos/a-group-of-people-running-down-a-dirt-road-LyORqx-3O-c",
   },
   onlineCoaching: {
     src: "/images/services/online-coaching.jpg",
     alt: "Client following an online workout on a laptop at home",
-    credit: "Unsplash — woman stretching watching laptop (02_PUCjs7pw)",
-    url: "https://unsplash.com/photos/woman-stretching-on-yoga-mat-watching-laptop-02_PUCjs7pw",
+    credit: "Unsplash — woman doing yoga in front of laptop (-2ezVIyGgc0)",
+    url: "https://unsplash.com/photos/woman-doing-yoga-in-front-of-a-laptop--2ezVIyGgc0",
   },
 };
 
