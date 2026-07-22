@@ -157,27 +157,27 @@ export const trainingGallery = [
 export const serviceImages = {
   personalTraining: {
     src: "/images/services/personal-training.jpg",
-    alt: "Personal trainer coaching a client through exercises in the gym",
-    credit: "Unsplash — two people exercising in gym (buWcS7G1_28)",
-    url: "https://unsplash.com/photos/two-person-inside-gym-exercising-buWcS7G1_28",
+    alt: "Personal trainer assisting a client during a floor exercise in the gym",
+    credit: "Unsplash — woman kneeling beside man (R0y_bEUjiOM)",
+    url: "https://unsplash.com/photos/woman-kneeling-beside-man-R0y_bEUjiOM",
   },
   boxing: {
     src: "/images/services/boxing-training.jpg",
-    alt: "Two boxers sparring during a training session in a boxing gym",
-    credit: "Unsplash — two men sparring in boxing gym (FH6JcaCrYJ0)",
-    url: "https://unsplash.com/photos/two-men-sparring-inside-boxing-gym-FH6JcaCrYJ0",
+    alt: "Boxer training with focus mitts during a pad work session in the gym",
+    credit: "Unsplash — boxer training with focus mitts (tr31p3GeJAc)",
+    url: "https://unsplash.com/photos/boxer-training-with-focus-mitts-in-gym-tr31p3GeJAc",
   },
   smallGroup: {
     src: "/images/services/small-group-training.jpg",
-    alt: "Group of people running together during an outdoor training session",
-    credit: "Unsplash — group running on dirt road (LyORqx-3O-c)",
-    url: "https://unsplash.com/photos/a-group-of-people-running-down-a-dirt-road-LyORqx-3O-c",
+    alt: "Group exercising together outdoors on a sunny day",
+    credit: "Unsplash — people exercising outdoors (7mS5qa7VFYk)",
+    url: "https://unsplash.com/photos/people-exercising-outdoors-on-a-sunny-day-7mS5qa7VFYk",
   },
   onlineCoaching: {
     src: "/images/services/online-coaching.jpg",
-    alt: "Client following an online workout on a laptop at home",
-    credit: "Unsplash — woman doing yoga in front of laptop (-2ezVIyGgc0)",
-    url: "https://unsplash.com/photos/woman-doing-yoga-in-front-of-a-laptop--2ezVIyGgc0",
+    alt: "Client following an online workout on a yoga mat at home",
+    credit: "Unsplash — woman on yoga mat at home (qa1wvrlWCio)",
+    url: "https://unsplash.com/photos/woman-in-black-t-shirt-and-black-pants-lying-on-black-yoga-mat-qa1wvrlWCio",
   },
 };
 
