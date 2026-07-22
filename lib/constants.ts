@@ -169,15 +169,15 @@ export const serviceImages = {
   },
   smallGroup: {
     src: "/images/services/small-group-training.jpg",
-    alt: "Group exercising together outdoors on a sunny day",
-    credit: "Unsplash — people exercising outdoors (7mS5qa7VFYk)",
-    url: "https://unsplash.com/photos/people-exercising-outdoors-on-a-sunny-day-7mS5qa7VFYk",
+    alt: "Group of people running together during an outdoor training session",
+    credit: "Unsplash — group running on dirt road (LyORqx-3O-c)",
+    url: "https://unsplash.com/photos/a-group-of-people-running-down-a-dirt-road-LyORqx-3O-c",
   },
   onlineCoaching: {
     src: "/images/services/online-coaching.jpg",
-    alt: "Client following an online workout on a yoga mat at home",
-    credit: "Unsplash — woman on yoga mat at home (qa1wvrlWCio)",
-    url: "https://unsplash.com/photos/woman-in-black-t-shirt-and-black-pants-lying-on-black-yoga-mat-qa1wvrlWCio",
+    alt: "Client following an online workout on a laptop at home",
+    credit: "Unsplash — woman doing yoga in front of laptop (-2ezVIyGgc0)",
+    url: "https://unsplash.com/photos/woman-doing-yoga-in-front-of-a-laptop--2ezVIyGgc0",
   },
 };
 
