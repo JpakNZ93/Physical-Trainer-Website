@@ -163,9 +163,9 @@ export const serviceImages = {
   },
   boxing: {
     src: "/images/services/boxing-training.jpg",
-    alt: "Athlete training on outdoor bars during a high-intensity conditioning session",
-    credit: "Gabin Vallet (@gabinvallet) on Unsplash — tya7xtGSLu0",
-    url: "https://unsplash.com/photos/woman-in-white-long-sleeve-shirt-and-red-pants-standing-on-red-metal-bar-during-daytime-tya7xtGSLu0",
+    alt: "Athlete training on outdoor calisthenics equipment during a conditioning session",
+    credit: "Gabin Vallet (@gabinvallet) on Unsplash — dmQaNlKxc-s",
+    url: "https://unsplash.com/photos/man-in-white-t-shirt-and-white-shorts-holding-black-and-white-metal-pole-dmQaNlKxc-s",
   },
   smallGroup: {
     src: "/images/services/small-group-training.jpg",
