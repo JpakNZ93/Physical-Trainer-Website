@@ -157,27 +157,27 @@ export const trainingGallery = [
 export const serviceImages = {
   personalTraining: {
     src: "/images/services/personal-training.jpg",
-    alt: "Personal trainer assisting a client during a floor exercise in the gym",
-    credit: "Unsplash — woman kneeling beside man (R0y_bEUjiOM)",
-    url: "https://unsplash.com/photos/woman-kneeling-beside-man-R0y_bEUjiOM",
+    alt: "Client training on outdoor calisthenics equipment during a personal session",
+    credit: "Gabin Vallet (@gabinvallet) on Unsplash — qq_wRiGXf7o",
+    url: "https://unsplash.com/photos/woman-in-white-long-sleeve-shirt-and-black-pants-sitting-on-red-metal-frame-qq_wRiGXf7o",
   },
   boxing: {
     src: "/images/services/boxing-training.jpg",
-    alt: "Boxer training with focus mitts during a pad work session in the gym",
-    credit: "Unsplash — boxer training with focus mitts (tr31p3GeJAc)",
-    url: "https://unsplash.com/photos/boxer-training-with-focus-mitts-in-gym-tr31p3GeJAc",
+    alt: "Athlete training on outdoor bars during a high-intensity conditioning session",
+    credit: "Gabin Vallet (@gabinvallet) on Unsplash — tya7xtGSLu0",
+    url: "https://unsplash.com/photos/woman-in-white-long-sleeve-shirt-and-red-pants-standing-on-red-metal-bar-during-daytime-tya7xtGSLu0",
   },
   smallGroup: {
     src: "/images/services/small-group-training.jpg",
-    alt: "Group of people running together during an outdoor training session",
-    credit: "Unsplash — group running on dirt road (LyORqx-3O-c)",
-    url: "https://unsplash.com/photos/a-group-of-people-running-down-a-dirt-road-LyORqx-3O-c",
+    alt: "People training together outdoors on a fitness trampoline",
+    credit: "Gabin Vallet (@gabinvallet) on Unsplash — JVnLqWGWVzs",
+    url: "https://unsplash.com/photos/man-in-black-crew-neck-t-shirt-and-black-shorts-running-on-blue-and-white-trampoline-JVnLqWGWVzs",
   },
   onlineCoaching: {
     src: "/images/services/online-coaching.jpg",
-    alt: "Client following an online workout on a laptop at home",
-    credit: "Unsplash — woman doing yoga in front of laptop (-2ezVIyGgc0)",
-    url: "https://unsplash.com/photos/woman-doing-yoga-in-front-of-a-laptop--2ezVIyGgc0",
+    alt: "Client checking training on their phone during an outdoor workout",
+    credit: "Gabin Vallet (@gabinvallet) on Unsplash — XUn7yMZH2yg",
+    url: "https://unsplash.com/photos/man-in-black-t-shirt-and-blue-denim-jeans-holding-black-smartphone-XUn7yMZH2yg",
   },
 };
 
