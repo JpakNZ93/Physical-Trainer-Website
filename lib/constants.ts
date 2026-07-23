@@ -8,6 +8,11 @@ export const siteConfig = {
   phoneHref: "tel:0450122665",
 };
 
+export const contactRecipient = {
+  name: "Johnson Huynh",
+  email: "jhuynh2565@gmail.com",
+};
+
 export const coach = {
   name: "Johnson Huynh",
   firstName: "Johnson",

@@ -22,6 +22,9 @@ function ContactFormFields({ packageId }: ContactFormFieldsProps) {
   const selectedPackage = packages.find((pkg) => pkg.id === packageId);
 
   const [showToast, setShowToast] = useState(false);
+  const [toastMessage, setToastMessage] = useState("");
+  const [toastIsError, setToastIsError] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [message, setMessage] = useState(defaultMessage);
 
@@ -29,7 +32,14 @@ function ContactFormFields({ packageId }: ContactFormFieldsProps) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   }
 
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
+  function showFeedback(text: string, isError = false) {
+    setToastMessage(text);
+    setToastIsError(isError);
+    setShowToast(true);
+    setTimeout(() => setShowToast(false), 4000);
+  }
+
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const form = e.currentTarget;
     const formData = new FormData(form);
@@ -52,10 +62,38 @@ function ContactFormFields({ packageId }: ContactFormFieldsProps) {
     }
 
     setErrors({});
-    form.reset();
-    setMessage(defaultMessage);
-    setShowToast(true);
-    setTimeout(() => setShowToast(false), 4000);
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: name.trim(),
+          email: email.trim(),
+          phone: phone.trim(),
+          message: messageValue.trim(),
+          packageId,
+        }),
+      });
+
+      const data = (await response.json()) as { error?: string };
+
+      if (!response.ok) {
+        showFeedback(data.error ?? "Unable to send your message. Please try again.", true);
+        return;
+      }
+
+      form.reset();
+      setMessage(defaultMessage);
+      showFeedback("Message sent! We'll be in touch soon.");
+    } catch {
+      showFeedback("Unable to send your message. Please try again.", true);
+    } finally {
+      setIsSubmitting(false);
+    }
   }
 
   const inputClass =
@@ -83,7 +121,13 @@ function ContactFormFields({ packageId }: ContactFormFieldsProps) {
           <label htmlFor="name" className="mb-1 block text-sm text-white/70">
             Name
           </label>
-          <input type="text" id="name" name="name" className={inputClass} />
+          <input
+            type="text"
+            id="name"
+            name="name"
+            className={inputClass}
+            disabled={isSubmitting}
+          />
           {errors.name && <p className="mt-1 text-sm text-red-400">{errors.name}</p>}
         </div>
 
@@ -91,7 +135,13 @@ function ContactFormFields({ packageId }: ContactFormFieldsProps) {
           <label htmlFor="email" className="mb-1 block text-sm text-white/70">
             Email
           </label>
-          <input type="email" id="email" name="email" className={inputClass} />
+          <input
+            type="email"
+            id="email"
+            name="email"
+            className={inputClass}
+            disabled={isSubmitting}
+          />
           {errors.email && <p className="mt-1 text-sm text-red-400">{errors.email}</p>}
         </div>
 
@@ -99,7 +149,13 @@ function ContactFormFields({ packageId }: ContactFormFieldsProps) {
           <label htmlFor="phone" className="mb-1 block text-sm text-white/70">
             Phone
           </label>
-          <input type="tel" id="phone" name="phone" className={inputClass} />
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            className={inputClass}
+            disabled={isSubmitting}
+          />
           {errors.phone && <p className="mt-1 text-sm text-red-400">{errors.phone}</p>}
         </div>
 
@@ -114,21 +170,29 @@ function ContactFormFields({ packageId }: ContactFormFieldsProps) {
             className={inputClass}
             value={message}
             onChange={(e) => setMessage(e.target.value)}
+            disabled={isSubmitting}
           />
           {errors.message && <p className="mt-1 text-sm text-red-400">{errors.message}</p>}
         </div>
 
         <button
           type="submit"
-          className="mt-2 w-full bg-brand-yellow px-6 py-4 text-sm font-bold uppercase tracking-wider text-brand-black transition-colors hover:bg-yellow-300"
+          disabled={isSubmitting}
+          className="mt-2 w-full bg-brand-yellow px-6 py-4 text-sm font-bold uppercase tracking-wider text-brand-black transition-colors hover:bg-yellow-300 disabled:cursor-not-allowed disabled:opacity-60"
         >
-          Send Message
+          {isSubmitting ? "Sending..." : "Send Message"}
         </button>
       </form>
 
       {showToast && (
-        <div className="absolute -top-4 right-0 left-0 rounded border border-green-500/30 bg-green-900/80 px-4 py-3 text-center text-sm text-green-300">
-          Message sent! We&apos;ll be in touch soon.
+        <div
+          className={`absolute -top-4 right-0 left-0 rounded border px-4 py-3 text-center text-sm ${
+            toastIsError
+              ? "border-red-500/30 bg-red-900/80 text-red-200"
+              : "border-green-500/30 bg-green-900/80 text-green-300"
+          }`}
+        >
+          {toastMessage}
         </div>
       )}
     </div>
