@@ -13,8 +13,6 @@ export const contactRecipient = {
   email: "jhuynh2565@gmail.com",
 };
 
-export const contactFromEmail = "180PT <hello@180pt.com.au>";
-
 export const coach = {
   name: "Johnson Huynh",
   firstName: "Johnson",

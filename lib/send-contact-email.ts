@@ -1,5 +1,5 @@
-import { Resend } from "resend";
-import { contactFromEmail, contactRecipient, packages } from "@/lib/constants";
+import nodemailer from "nodemailer";
+import { contactRecipient, packages } from "@/lib/constants";
 
 interface ContactSubmission {
   name: string;
@@ -27,15 +27,15 @@ function getPackageLabel(packageId?: string | null) {
 }
 
 export async function sendContactEmail(submission: ContactSubmission) {
-  const apiKey = process.env.RESEND_API_KEY;
-  if (!apiKey) {
-    throw new Error("RESEND_API_KEY is not configured");
+  const user = process.env.GMAIL_USER ?? contactRecipient.email;
+  const pass = process.env.GMAIL_APP_PASSWORD;
+
+  if (!pass) {
+    throw new Error("GMAIL_APP_PASSWORD is not configured");
   }
 
-  const from = process.env.CONTACT_FROM_EMAIL ?? contactFromEmail;
-  const to =
-    process.env.CONTACT_TO_EMAIL ??
-    `${contactRecipient.name} <${contactRecipient.email}>`;
+  const from = `${contactRecipient.name} <${user}>`;
+  const to = `${contactRecipient.name} <${contactRecipient.email}>`;
 
   const packageLabel = getPackageLabel(submission.packageId);
   const subject = `New 180PT enquiry from ${submission.name}`;
@@ -67,12 +67,17 @@ export async function sendContactEmail(submission: ContactSubmission) {
     <p>${escapeHtml(submission.message).replaceAll("\n", "<br />")}</p>
   `;
 
-  const resend = new Resend(apiKey);
+  const transporter = nodemailer.createTransport({
+    host: "smtp.gmail.com",
+    port: 465,
+    secure: true,
+    auth: { user, pass },
+  });
 
-  return resend.emails.send({
+  await transporter.sendMail({
     from,
-    to: [to],
-    replyTo: [`${submission.name} <${submission.email}>`],
+    to,
+    replyTo: `${submission.name} <${submission.email}>`,
     subject,
     text,
     html,

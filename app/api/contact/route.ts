@@ -48,21 +48,13 @@ export async function POST(request: Request) {
   }
 
   try {
-    const result = await sendContactEmail({
+    await sendContactEmail({
       name,
       email,
       phone,
       message,
       packageId,
     });
-
-    if (result.error) {
-      console.error("Resend error:", result.error);
-      return Response.json(
-        { error: "Unable to send your message right now. Please try again shortly." },
-        { status: 502 },
-      );
-    }
 
     return Response.json({ success: true });
   } catch (error) {
