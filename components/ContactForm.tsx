@@ -3,6 +3,7 @@
 import { useState, FormEvent, useMemo } from "react";
 import { useSearchParams } from "next/navigation";
 import { packages } from "@/lib/constants";
+import { ContactSuccessModal } from "@/components/ContactSuccessModal";
 
 function buildPackageMessage(packageId: string | null) {
   if (!packageId) return "";
@@ -21,9 +22,9 @@ function ContactFormFields({ packageId }: ContactFormFieldsProps) {
   const defaultMessage = useMemo(() => buildPackageMessage(packageId), [packageId]);
   const selectedPackage = packages.find((pkg) => pkg.id === packageId);
 
-  const [showToast, setShowToast] = useState(false);
-  const [toastMessage, setToastMessage] = useState("");
-  const [toastIsError, setToastIsError] = useState(false);
+  const [showSuccessModal, setShowSuccessModal] = useState(false);
+  const [showErrorToast, setShowErrorToast] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [message, setMessage] = useState(defaultMessage);
@@ -32,11 +33,10 @@ function ContactFormFields({ packageId }: ContactFormFieldsProps) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   }
 
-  function showFeedback(text: string, isError = false) {
-    setToastMessage(text);
-    setToastIsError(isError);
-    setShowToast(true);
-    setTimeout(() => setShowToast(false), 4000);
+  function showError(text: string) {
+    setErrorMessage(text);
+    setShowErrorToast(true);
+    setTimeout(() => setShowErrorToast(false), 5000);
   }
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
@@ -82,15 +82,15 @@ function ContactFormFields({ packageId }: ContactFormFieldsProps) {
       const data = (await response.json()) as { error?: string };
 
       if (!response.ok) {
-        showFeedback(data.error ?? "Unable to send your message. Please try again.", true);
+        showError(data.error ?? "Unable to send your message. Please try again.");
         return;
       }
 
       form.reset();
       setMessage(defaultMessage);
-      showFeedback("Message sent! We'll be in touch soon.");
+      setShowSuccessModal(true);
     } catch {
-      showFeedback("Unable to send your message. Please try again.", true);
+      showError("Unable to send your message. Please try again.");
     } finally {
       setIsSubmitting(false);
     }
@@ -184,17 +184,19 @@ function ContactFormFields({ packageId }: ContactFormFieldsProps) {
         </button>
       </form>
 
-      {showToast && (
+      {showErrorToast && (
         <div
-          className={`absolute -top-4 right-0 left-0 rounded border px-4 py-3 text-center text-sm ${
-            toastIsError
-              ? "border-red-500/30 bg-red-900/80 text-red-200"
-              : "border-green-500/30 bg-green-900/80 text-green-300"
-          }`}
+          role="alert"
+          className="absolute -top-4 right-0 left-0 rounded border border-red-500/30 bg-red-900/80 px-4 py-3 text-center text-sm text-red-200"
         >
-          {toastMessage}
+          {errorMessage}
         </div>
       )}
+
+      <ContactSuccessModal
+        isOpen={showSuccessModal}
+        onClose={() => setShowSuccessModal(false)}
+      />
     </div>
   );
 }
