@@ -1,5 +1,5 @@
 import { Resend } from "resend";
-import { contactRecipient, packages, siteConfig } from "@/lib/constants";
+import { contactFromEmail, contactRecipient, packages } from "@/lib/constants";
 
 interface ContactSubmission {
   name: string;
@@ -32,8 +32,7 @@ export async function sendContactEmail(submission: ContactSubmission) {
     throw new Error("RESEND_API_KEY is not configured");
   }
 
-  const from =
-    process.env.CONTACT_FROM_EMAIL ?? `${siteConfig.name} <onboarding@resend.dev>`;
+  const from = process.env.CONTACT_FROM_EMAIL ?? contactFromEmail;
   const to =
     process.env.CONTACT_TO_EMAIL ??
     `${contactRecipient.name} <${contactRecipient.email}>`;
