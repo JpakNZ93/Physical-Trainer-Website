@@ -34,7 +34,9 @@ export async function sendContactEmail(submission: ContactSubmission) {
 
   const from =
     process.env.CONTACT_FROM_EMAIL ?? `${siteConfig.name} <onboarding@resend.dev>`;
-  const to = `${contactRecipient.name} <${contactRecipient.email}>`;
+  const to =
+    process.env.CONTACT_TO_EMAIL ??
+    `${contactRecipient.name} <${contactRecipient.email}>`;
 
   const packageLabel = getPackageLabel(submission.packageId);
   const subject = `New 180PT enquiry from ${submission.name}`;
