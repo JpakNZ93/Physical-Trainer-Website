@@ -90,9 +90,10 @@ export default function AboutPage() {
                   life.
                 </p>
                 <p className="text-white/70">
-                  Known for a direct but supportive approach, {coach.firstName} builds plans around
-                  each client&apos;s schedule, ability, and goals — from first-time trainers to
-                  clients pushing their next boxing and conditioning milestone.
+                  Known for a direct but supportive approach, {coach.firstName}{" "}
+                  builds plans around each client&apos;s schedule, ability, and goals — from
+                  first-time trainers to clients pushing their next boxing and conditioning
+                  milestone.
                 </p>
               </div>
 

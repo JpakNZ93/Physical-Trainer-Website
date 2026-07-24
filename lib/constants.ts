@@ -55,7 +55,7 @@ export const mobileTrainingCase = {
   headline: "Built for People Who'd Rather Train",
   highlight: "Outside the Gym",
   intro:
-    "If you're tired of fighting for equipment, sitting in traffic, and paying for a membership you barely use — you're not alone. 180PT was built for people who want real results without the gym hassle. We bring professional coaching to the places you already love: your local park, your backyard, or your home.",
+    "No traffic. No crowded gyms. No wasted memberships. 180PT brings expert personal training to your home, workplace or local park—helping busy people get real results on their schedule.",
   points: [
     {
       icon: "trees" as const,
@@ -100,7 +100,8 @@ export const servicesPage = {
     },
     {
       title: "Start at your location",
-      description: "We come to your park, home, or garage — sessions are 45 minutes and booked around your schedule.",
+      description:
+        "We come to your park, home, or garage — sessions are 45 or 60 minutes and booked around your schedule.",
     },
   ],
   programsHeading: "Find Your Program",
